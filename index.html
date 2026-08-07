@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAPONG v2.0 - AI-Driven Autonomous Pentesting Platform</title>
+    <title>RAPONG v2.0 - AI 기반 자율 모의해킹 플랫폼</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -169,6 +169,16 @@
             margin-bottom: 3rem;
         }
 
+        .section-intro {
+            background: var(--dark-card);
+            border-left: 5px solid var(--cyber-green);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
         /* ========== ASCII ART ========== */
         .ascii-art {
             background: var(--code-bg);
@@ -216,7 +226,7 @@
             margin: 3rem 0;
         }
 
-        /* ========== TOOL GRID ========== */
+        /* ========== TOOL SECTION ========== */
         .tool-category {
             margin: 4rem 0;
         }
@@ -244,151 +254,71 @@
             color: var(--cyber-blue);
         }
 
-        .tool-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
+        .category-intro {
+            background: var(--dark-panel);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--cyber-blue);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .tool-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
         .tool-item {
             background: var(--dark-panel);
             border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 8px;
-            padding: 1rem;
+            border-radius: 10px;
+            padding: 1.5rem;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .tool-item:hover {
             border-color: var(--cyber-green);
             background: rgba(0, 255, 136, 0.05);
-            transform: translateX(5px);
+            transform: translateX(8px);
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .tool-name {
             font-family: 'JetBrains Mono', monospace;
             color: var(--cyber-blue);
-            font-size: 0.95rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 700;
         }
 
-        .tool-desc {
-            font-size: 0.85rem;
-            color: var(--text-dim);
-            margin-top: 0.5rem;
-        }
-
-        /* ========== FEATURE LIST ========== */
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-item {
-            background: var(--dark-panel);
-            border-left: 4px solid var(--cyber-green);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: rgba(0, 255, 136, 0.05);
-            border-left-width: 8px;
-        }
-
-        .feature-number {
-            display: inline-block;
-            background: var(--cyber-green);
-            color: var(--dark-bg);
-            font-weight: 900;
-            padding: 0.3rem 0.8rem;
+        .tool-badge {
+            background: var(--cyber-red);
+            color: white;
+            padding: 0.2rem 0.6rem;
             border-radius: 5px;
-            margin-right: 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
         }
 
-        .feature-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--cyber-blue);
+        .tool-desc-ko {
+            color: var(--text-primary);
+            font-size: 1rem;
             margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
-        .feature-desc {
+        .tool-desc-detail {
             color: var(--text-dim);
-            line-height: 1.6;
-        }
-
-        /* ========== TABLE ========== */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            background: var(--dark-panel);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .comparison-table th {
-            background: var(--cyber-green);
-            color: var(--dark-bg);
-            padding: 1rem;
-            text-align: left;
-            font-weight: 700;
-        }
-
-        .comparison-table td {
-            padding: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .comparison-table tr:hover {
-            background: rgba(0, 255, 136, 0.05);
-        }
-
-        /* ========== CODE ========== */
-        .code-block {
-            background: var(--code-bg);
-            border: 2px solid var(--cyber-blue);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            overflow-x: auto;
-        }
-
-        .code-block pre {
-            color: var(--cyber-green);
             font-size: 0.95rem;
-        }
-
-        /* ========== SCROLL TO TOP ========== */
-        .scroll-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--cyber-green);
-            color: var(--dark-bg);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.5);
-        }
-
-        .scroll-top.visible {
-            opacity: 1;
-        }
-
-        .scroll-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.7);
+            line-height: 1.6;
         }
 
         /* ========== RESPONSIVE ========== */
@@ -396,11 +326,6 @@
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .tool-grid {
-                grid-template-columns: 1fr;
-            }
-
             .card-grid {
                 grid-template-columns: 1fr;
             }
@@ -413,8 +338,8 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="title-mega">RAPONG</h1>
-            <p class="subtitle">AI-Driven Autonomous Penetration Testing Platform</p>
-            <div class="version-badge">v2.0 | 2026.08.08 | FULLY LOADED</div>
+            <p class="subtitle">AI 기반 완전 자율 모의해킹 플랫폼</p>
+            <div class="version-badge">v2.0 | 2026.08.08 | 완전체</div>
 
             <div class="stats-grid">
                 <div class="stat-card">
@@ -437,10 +362,24 @@
         </div>
     </section>
 
-    <!-- ARCHITECTURE -->
+    <!-- WHAT IS RAPONG -->
     <section class="container">
-        <h2 class="section-title">🏗️ Architecture</h2>
-        <p class="section-subtitle">Complete Attack Flow Visualization</p>
+        <h2 class="section-title">RAPONG이란?</h2>
+        <div class="section-intro">
+            <p style="margin-bottom: 1rem;">
+                <strong>RAPONG</strong>은 Claude AI를 기반으로 한 완전 자율 모의해킹 플랫폼입니다.
+                사용자의 개입 없이 정찰부터 데이터 유출까지 전체 공격 사이클을 자동으로 수행합니다.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                <strong>77개의 MCP Tools</strong>를 제공하며, 이 중 <strong>68개가 31337 모드에서 자동으로 트리거</strong>됩니다.
+                나머지 9개는 평가(assessment) 관리 도구로, 수동으로 사용됩니다.
+            </p>
+            <p>
+                <strong>31337 모드</strong>를 활성화하면 무한 루프가 시작되며,
+                8단계 공격 사이클(정찰 → 매핑 → 취약점 평가 → 익스플로잇 → 사후 공격 → 측면 이동 → 권한 상승 → 데이터 유출)을
+                명시적인 중지 명령("그만", "멈춰", "정지", "스톱", "중단")이 있을 때까지 반복합니다.
+            </p>
+        </div>
 
         <div class="ascii-art">
             <pre>
@@ -457,17 +396,17 @@
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 
-                                     User Input
+                                 사용자 입력 (User Input)
                                          │
                                          ▼
                             ┌────────────────────────┐
-                            │   Claude Code CLI      │
+                            │   Claude Code CLI      │ ← MCP 클라이언트
                             │   (MCP Client)         │
                             └────────────┬───────────┘
                                          │
                                          ▼
                             ┌────────────────────────┐
-                            │   RAPONG MCP Server    │
+                            │   RAPONG MCP Server    │ ← 77개 도구 등록
                             │   ┌────────────────┐   │
                             │   │  77 MCP Tools  │   │
                             │   └────────────────┘   │
@@ -483,11 +422,11 @@
                 └───────────────────────┼──────────────────────┘
                                         ▼
                             ┌────────────────────────┐
-                            │   31337 Engine         │
+                            │   31337 Engine         │ ← 자율 공격 엔진
                             │   ┌────────────────┐   │
-                            │   │ 68 Features    │   │
-                            │   │ Infinite Loop  │   │
-                            │   │ 8-Phase Cycle  │   │
+                            │   │ 68 Features    │   │ ← 자동 트리거
+                            │   │ Infinite Loop  │   │ ← 무한 루프
+                            │   │ 8-Phase Cycle  │   │ ← 8단계 사이클
                             │   └────────────────┘   │
                             └────────────┬───────────┘
                                          │
@@ -495,20 +434,20 @@
             ▼                            ▼                            ▼
     ┌──────────────┐           ┌──────────────┐            ┌──────────────┐
     │   Phase 1-2  │           │   Phase 3-4  │            │   Phase 5-8  │
-    │ Recon+Mapping│           │  Vuln+Exploit│            │ Post-Exploit │
-    │              │           │              │            │   +Exfil     │
-    │ • Subdomain  │           │ • SQLi       │            │ • Privesc    │
-    │ • Port Scan  │           │ • XSS        │            │ • Lateral    │
-    │ • Tech Stack │           │ • SSRF       │            │ • Persist    │
-    │ • Directory  │           │ • NoSQL      │            │ • Exfiltrate │
+    │ 정찰+매핑     │           │  취약점+익스  │            │ 사후+유출     │
+    │              │           │              │            │              │
+    │ • 서브도메인  │           │ • SQLi       │            │ • 권한상승    │
+    │ • 포트 스캔  │           │ • XSS        │            │ • 측면이동    │
+    │ • 기술 스택  │           │ • SSRF       │            │ • 지속성확보  │
+    │ • 디렉토리   │           │ • NoSQL      │            │ • 데이터유출  │
     └──────┬───────┘           └──────┬───────┘            └──────┬───────┘
            │                          │                           │
            └──────────────────────────┼───────────────────────────┘
                                       ▼
                           ┌────────────────────────┐
-                          │   Target Compromised   │
-                          │   ✓ Evidence Collected │
-                          │   ✓ Findings Reported  │
+                          │   타겟 장악 완료        │
+                          │   ✓ 증거 수집          │
+                          │   ✓ 취약점 보고        │
                           └────────────────────────┘
             </pre>
         </div>
@@ -516,8 +455,24 @@
 
     <!-- 77 MCP TOOLS -->
     <section class="container">
-        <h2 class="section-title">🛠️ 77 MCP Tools</h2>
-        <p class="section-subtitle">Complete Arsenal: Core + Enhanced + Advanced</p>
+        <h2 class="section-title">🛠️ 77개 MCP Tools</h2>
+        <p class="section-subtitle">모든 도구는 MCP (Model Context Protocol)을 통해 Claude AI와 연결됩니다</p>
+
+        <div class="section-intro">
+            <p style="margin-bottom: 1rem;">
+                <strong>MCP Tools</strong>는 Claude AI가 실제 해킹 작업을 수행하기 위해 호출하는 함수들입니다.
+                총 77개의 도구가 있으며, 3개 카테고리로 나뉩니다:
+            </p>
+            <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                <li><strong>Core Tools (35개)</strong>: 기본 평가 관리, 네트워크 스캔, 취약점 테스트, 익스플로잇 실행 도구</li>
+                <li><strong>Enhanced Tools (25개)</strong>: 고급 공격 자동화, WAF 우회, 자동 체이닝, 클라우드 익스플로잇</li>
+                <li><strong>Advanced Tools (17개)</strong>: NoSQL 공격, API 퍼징, 폴리글랏 페이로드, 취약점 체인 그래프</li>
+            </ul>
+            <p>
+                이 중 <strong>68개가 31337 모드에서 자동으로 트리거</strong>되며,
+                9개 도구(assessment 관리, list 등)는 수동 사용 도구입니다.
+            </p>
+        </div>
 
         <!-- Core Tools (35) -->
         <div class="tool-category">
@@ -525,878 +480,1197 @@
                 <div class="category-title">⚙️ Core Tools</div>
                 <div class="category-count">35</div>
             </div>
-            <div class="tool-grid">
+
+            <div class="category-intro">
+                <strong>Core Tools</strong>는 RAPONG의 기본 기능을 제공합니다.
+                평가 생성, 네트워크 정찰, 포트 스캔, HTTP 요청, 컨테이너 명령 실행, 익스플로잇 수행 등
+                모의해킹의 모든 기본 작업을 수행할 수 있습니다.
+                31337 모드에서는 이 중 26개가 자동으로 트리거됩니다 (9개는 수동 관리 도구).
+            </div>
+
+            <div class="tool-list">
                 <div class="tool-item">
-                    <div class="tool-name">create_assessment</div>
-                    <div class="tool-desc">Create new pentest assessment</div>
+                    <div class="tool-header">
+                        <span class="tool-name">create_assessment</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">새로운 모의해킹 평가 생성</div>
+                    <div class="tool-desc-detail">
+                        타겟, 범위, 제약사항 등을 지정하여 새 평가를 생성합니다.
+                        평가마다 독립된 작업 공간이 할당되며, 모든 데이터(리콘, 취약점, 증거)가 별도로 관리됩니다.
+                        Quick Start 트리거(<code>target.com 31337</code>)를 사용하면 자동 생성도 가능합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">load_assessment</div>
-                    <div class="tool-desc">Load existing assessment</div>
+                    <div class="tool-header">
+                        <span class="tool-name">load_assessment</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">기존 평가 불러오기</div>
+                    <div class="tool-desc-detail">
+                        이전에 생성한 평가를 불러와서 작업을 이어갑니다.
+                        중단된 31337 모드도 재개 가능하며, 모든 상태(크레덴셜, 리콘 데이터, 체크포인트)가 보존됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">add_card</div>
-                    <div class="tool-desc">Add finding/observation card</div>
+                    <div class="tool-header">
+                        <span class="tool-name">list_assessments</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">모든 평가 목록 조회</div>
+                    <div class="tool-desc-detail">
+                        생성된 모든 평가의 목록을 확인합니다. 평가 이름, 생성일, 타겟, 상태 등을 표시합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">list_cards</div>
-                    <div class="tool-desc">List all cards in assessment</div>
+                    <div class="tool-header">
+                        <span class="tool-name">add_card</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">취약점/관찰/정보 카드 추가</div>
+                    <div class="tool-desc-detail">
+                        발견한 취약점을 카드로 기록합니다. CVSS 4.0 벡터, 재현 가능한 증거, 기술적 분석이 포함됩니다.
+                        카드 타입: finding (취약점), observation (분석 노트), info (기술 스택).
+                        31337 모드에서는 자동으로 기록되지만, 수동 추가도 가능합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">update_card</div>
-                    <div class="tool-desc">Update existing card</div>
+                    <div class="tool-header">
+                        <span class="tool-name">list_cards</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">평가의 모든 카드 목록 조회</div>
+                    <div class="tool-desc-detail">
+                        현재 평가에 기록된 모든 취약점, 관찰 사항, 정보 카드를 확인합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">delete_card</div>
-                    <div class="tool-desc">Delete card from assessment</div>
+                    <div class="tool-header">
+                        <span class="tool-name">update_card</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">기존 카드 업데이트</div>
+                    <div class="tool-desc-detail">
+                        발견한 취약점에 추가 정보를 덧붙이거나, 익스플로잇 성공 후 영향도를 업데이트합니다.
+                        중복 카드 생성을 방지하고, 하나의 취약점에 대한 모든 정보를 통합 관리합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">add_recon_data</div>
-                    <div class="tool-desc">Add reconnaissance data</div>
+                    <div class="tool-header">
+                        <span class="tool-name">delete_card</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">카드 삭제</div>
+                    <div class="tool-desc-detail">
+                        오탐(false positive)이나 불필요한 카드를 삭제합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">list_recon</div>
-                    <div class="tool-desc">List recon data</div>
+                    <div class="tool-header">
+                        <span class="tool-name">add_recon_data</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">정찰 데이터 저장</div>
+                    <div class="tool-desc-detail">
+                        발견한 모든 자산을 기록합니다: 서브도메인, 오픈 포트, 기술 스택, API 엔드포인트, 크레덴셜, 설정 파일 등.
+                        31337 모드에서 자동으로 호출되며, 모든 발견 사항이 구조화된 데이터베이스에 저장됩니다.
+                        다른 도구들이 이 데이터를 참조하여 공격을 최적화합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">subdomain_enum</div>
-                    <div class="tool-desc">Enumerate subdomains</div>
+                    <div class="tool-header">
+                        <span class="tool-name">list_recon</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">정찰 데이터 조회</div>
+                    <div class="tool-desc-detail">
+                        저장된 모든 정찰 데이터를 확인합니다. 카테고리별(subdomain, port, technology, endpoint 등) 필터링 가능.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">ssl_analysis</div>
-                    <div class="tool-desc">Analyze SSL/TLS configuration</div>
+                    <div class="tool-header">
+                        <span class="tool-name">subdomain_enum</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">서브도메인 열거</div>
+                    <div class="tool-desc-detail">
+                        여러 도구를 조합하여 서브도메인을 탐색합니다: subfinder, amass, DNS brute-force.
+                        발견된 서브도메인은 자동으로 recon 데이터에 추가되며, 각 서브도메인에 대해 추가 스캔이 자동 실행됩니다.
+                        31337 모드에서는 정찰 단계(Phase 1)에서 자동으로 트리거됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">tech_detection</div>
-                    <div class="tool-desc">Detect web technologies</div>
+                    <div class="tool-header">
+                        <span class="tool-name">ssl_analysis</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">SSL/TLS 설정 분석</div>
+                    <div class="tool-desc-detail">
+                        인증서 정보, 암호화 스위트, 프로토콜 버전, 취약점(Heartbleed, POODLE, BEAST 등)을 분석합니다.
+                        만료된 인증서, 약한 암호화, 잘못된 설정을 자동으로 탐지하며,
+                        발견된 취약점은 자동으로 카드에 기록됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">scan</div>
-                    <div class="tool-desc">Execute scans (nmap, ffuf, nuclei)</div>
+                    <div class="tool-header">
+                        <span class="tool-name">tech_detection</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">웹 기술 스택 탐지</div>
+                    <div class="tool-desc-detail">
+                        타겟이 사용하는 모든 기술을 식별합니다: 웹 서버(nginx, Apache), 프레임워크(Laravel, Django, React),
+                        CMS(WordPress, Drupal), CDN, WAF, 분석 도구 등.
+                        버전 정보도 추출하며, 이를 기반으로 CVE 검색과 맞춤형 공격이 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">execute</div>
-                    <div class="tool-desc">Execute command in container</div>
+                    <div class="tool-header">
+                        <span class="tool-name">scan</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">멀티 스캐너 실행 (nmap, ffuf, nuclei)</div>
+                    <div class="tool-desc-detail">
+                        여러 스캔 유형을 지원합니다:
+                        <strong>nmap_full</strong> (전체 포트 스캔 + 서비스 탐지),
+                        <strong>ffuf</strong> (디렉토리/파일 퍼징),
+                        <strong>nuclei</strong> (취약점 템플릿 기반 자동 스캔).
+                        31337 모드에서는 정찰/매핑 단계에서 자동 실행되며, 결과는 자동으로 파싱되어 recon 데이터에 추가됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">python_exec</div>
-                    <div class="tool-desc">Execute Python code</div>
+                    <div class="tool-header">
+                        <span class="tool-name">execute</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">컨테이너 내 명령 실행</div>
+                    <div class="tool-desc-detail">
+                        Docker 컨테이너 안에서 임의의 bash 명령을 실행합니다.
+                        모든 모의해킹 도구(nmap, sqlmap, ffuf, hydra 등)가 사전 설치된 환경에서 안전하게 실행됩니다.
+                        31337 모드에서 광범위하게 사용되며, 커스텀 익스플로잇 스크립트 실행도 가능합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">http_request</div>
-                    <div class="tool-desc">Make HTTP requests (auto proxy)</div>
+                    <div class="tool-header">
+                        <span class="tool-name">python_exec</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Python 코드 실행</div>
+                    <div class="tool-desc-detail">
+                        컨테이너 내에서 Python 코드를 실행합니다. 멀티라인 코드 지원, requests/beautifulsoup4/lxml 등
+                        해킹 라이브러리 사전 설치. 커스텀 익스플로잇, API 공격, 데이터 파싱에 사용됩니다.
+                        31337 모드의 "Anti-Textbook Attacks"는 이 도구를 통해 구현됩니다
+                        (nmap 대신 소켓 프로그래밍, sqlmap 대신 수동 SQLi 페이로드).
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">credentials_add</div>
-                    <div class="tool-desc">Store discovered credentials</div>
+                    <div class="tool-header">
+                        <span class="tool-name">http_request</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">HTTP 요청 전송 (자동 프록시 적용)</div>
+                    <div class="tool-desc-detail">
+                        GET/POST/PUT/DELETE 등 모든 HTTP 메서드 지원. 헤더, 쿠키, JSON/폼 데이터 전송 가능.
+                        Tor나 오픈 프록시가 활성화된 경우 자동으로 프록시를 통해 요청이 전송됩니다.
+                        크레덴셜 플레이스홀더(<code>{{TOKEN}}</code>) 자동 치환.
+                        31337 모드에서 SQLi, XSS, SSRF 등 모든 웹 공격에 사용되는 핵심 도구입니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">credentials_list</div>
-                    <div class="tool-desc">List stored credentials</div>
+                    <div class="tool-header">
+                        <span class="tool-name">credentials_add</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">발견한 크레덴셜 저장</div>
+                    <div class="tool-desc-detail">
+                        SQLi, 설정 파일, DB 덤프 등에서 얻은 크레덴셜을 안전하게 저장합니다.
+                        저장된 크레덴셜은 자동으로 모든 서비스(SSH, FTP, MySQL, RDP, admin 패널 등)에 재사용 테스트됩니다.
+                        31337 모드의 "Credential Auto-Reuse" 기능의 핵심입니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">enable_tor</div>
-                    <div class="tool-desc">Enable Tor anonymization</div>
+                    <div class="tool-header">
+                        <span class="tool-name">credentials_list</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">저장된 크레덴셜 조회</div>
+                    <div class="tool-desc-detail">
+                        현재 평가에서 수집한 모든 크레덴셜을 확인합니다. 출처(source), 사용처, 테스트 결과 포함.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">disable_tor</div>
-                    <div class="tool-desc">Disable Tor</div>
+                    <div class="tool-header">
+                        <span class="tool-name">enable_tor</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Tor 익명화 활성화</div>
+                    <div class="tool-desc-detail">
+                        모든 HTTP 요청이 Tor 네트워크를 통해 전송되도록 설정합니다.
+                        IP 주소가 Tor exit node로 변경되며, 추적이 거의 불가능합니다.
+                        31337 모드에서는 자동으로 활성화됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">rotate_ip</div>
-                    <div class="tool-desc">Rotate Tor exit node</div>
+                    <div class="tool-header">
+                        <span class="tool-name">disable_tor</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Tor 비활성화</div>
+                    <div class="tool-desc-detail">
+                        Tor 익명화를 끕니다. 실제 IP로 요청이 전송됩니다.
+                        31337 모드에서 Tor가 3회 연속 실패하면 자동으로 오픈 프록시로 전환됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">set_user_agent</div>
-                    <div class="tool-desc">Set User-Agent header</div>
+                    <div class="tool-header">
+                        <span class="tool-name">rotate_ip</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Tor IP 주소 변경</div>
+                    <div class="tool-desc-detail">
+                        Tor exit node를 변경하여 새로운 IP 주소를 얻습니다.
+                        31337 모드에서는 10개 요청마다 자동으로 IP가 변경됩니다.
+                        Rate limit(429), 차단(403), 밴 감지 시에도 자동으로 즉시 IP를 변경합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">add_custom_ua</div>
-                    <div class="tool-desc">Add custom User-Agent</div>
+                    <div class="tool-header">
+                        <span class="tool-name">set_user_agent</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">User-Agent 헤더 설정</div>
+                    <div class="tool-desc-detail">
+                        User-Agent를 변경합니다: random (무작위 브라우저), googlebot, bingbot, browser (실제 브라우저), custom.
+                        31337 모드에서는 IP 변경과 함께 User-Agent도 자동으로 변경되어 핑거프린팅을 회피합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">get_proxy_status</div>
-                    <div class="tool-desc">Check proxy/anonymization status</div>
+                    <div class="tool-header">
+                        <span class="tool-name">add_custom_ua</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">커스텀 User-Agent 추가</div>
+                    <div class="tool-desc-detail">
+                        특정 User-Agent 문자열을 등록하여 사용합니다. 특정 WAF 우회나 특수한 공격에 필요한 경우 사용합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">enable_open_proxy</div>
-                    <div class="tool-desc">Enable open proxy pool</div>
+                    <div class="tool-header">
+                        <span class="tool-name">get_proxy_status</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">프록시/익명화 상태 확인</div>
+                    <div class="tool-desc-detail">
+                        현재 Tor 또는 오픈 프록시 사용 여부, 현재 IP 주소, User-Agent를 확인합니다.
+                        31337 모드에서는 자동으로 체크하며, 사용자에게 보고됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">disable_open_proxy</div>
-                    <div class="tool-desc">Disable open proxy</div>
+                    <div class="tool-header">
+                        <span class="tool-name">enable_open_proxy</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">오픈 프록시 활성화</div>
+                    <div class="tool-desc-detail">
+                        무료 공개 프록시 풀을 사용합니다. API에서 프록시 리스트를 가져오고, 헬스 체크 후 작동하는 프록시만 사용합니다.
+                        31337 모드에서 Tor가 실패하면 자동으로 전환됩니다. 50개 이상의 프록시 풀 관리.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">rotate_open_proxy</div>
-                    <div class="tool-desc">Rotate to next proxy</div>
+                    <div class="tool-header">
+                        <span class="tool-name">disable_open_proxy</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">오픈 프록시 비활성화</div>
+                    <div class="tool-desc-detail">
+                        오픈 프록시 사용을 중단하고 실제 IP로 전환합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">privesc_linux</div>
-                    <div class="tool-desc">Linux privilege escalation scanner</div>
+                    <div class="tool-header">
+                        <span class="tool-name">rotate_open_proxy</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">다음 프록시로 전환</div>
+                    <div class="tool-desc-detail">
+                        프록시 풀에서 다음 프록시로 변경합니다. 현재 프록시가 차단되거나 느린 경우 자동으로 전환됩니다.
+                        31337 모드에서는 밴 감지 시 즉시 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">shannon_whitebox_scan</div>
-                    <div class="tool-desc">Source code SAST analysis</div>
+                    <div class="tool-header">
+                        <span class="tool-name">privesc_linux</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Linux 권한 상승 스캐너</div>
+                    <div class="tool-desc-detail">
+                        Linux 시스템에서 권한 상승 취약점을 자동으로 탐색합니다:
+                        SUID 바이너리, sudo 잘못된 설정, 쓰기 가능한 cron, kernel exploits, Docker 소켓 등.
+                        31337 모드에서 쉘을 획득하면 자동으로 실행됩니다 ("Module Auto-Launch").
+                        발견된 취약점은 즉시 익스플로잇 시도됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">identify_cameras</div>
-                    <div class="tool-desc">Identify IP cameras on network</div>
+                    <div class="tool-header">
+                        <span class="tool-name">shannon_whitebox_scan</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">소스 코드 정적 분석 (SAST)</div>
+                    <div class="tool-desc-detail">
+                        소스 코드를 스캔하여 취약점을 탐지합니다: SQLi, XSS, 하드코딩된 크레덴셜, 위험한 함수 사용 등.
+                        Semgrep을 사용하며, 탐지된 취약점은 실제 엔드포인트와 매핑되어 라이브 익스플로잇으로 연결됩니다.
+                        31337 모드에서 .git 디렉토리를 발견하면 자동으로 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">audit_cameras</div>
-                    <div class="tool-desc">Audit camera security</div>
+                    <div class="tool-header">
+                        <span class="tool-name">identify_cameras</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">IP 카메라 탐지</div>
+                    <div class="tool-desc-detail">
+                        네트워크에서 IP 카메라를 찾습니다. RTSP 포트 스캔, ONVIF 프로토콜 탐지, 웹 인터페이스 식별.
+                        발견된 카메라는 자동으로 audit_cameras로 넘어가 보안 감사가 수행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">audit_rdp</div>
-                    <div class="tool-desc">Audit RDP configurations</div>
+                    <div class="tool-header">
+                        <span class="tool-name">audit_cameras</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">카메라 보안 감사</div>
+                    <div class="tool-desc-detail">
+                        IP 카메라의 보안을 감사합니다: 기본 크레덴셜, 펌웨어 버전 확인 → CVE 매칭, RTSP 스트림 하이재킹 시도.
+                        31337 모드에서 자동으로 실행되며, 취약한 카메라는 즉시 익스플로잇됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">auto_network_discovery</div>
-                    <div class="tool-desc">Automated network discovery</div>
+                    <div class="tool-header">
+                        <span class="tool-name">audit_rdp</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">RDP 설정 감사</div>
+                    <div class="tool-desc-detail">
+                        RDP(원격 데스크톱) 서비스를 감사합니다: 약한 크레덴셜, NLA 비활성화, BlueKeep 취약점 등.
+                        31337 모드에서 포트 3389가 발견되면 자동으로 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">auto_scan_enhanced</div>
-                    <div class="tool-desc">Enhanced automatic scanning</div>
+                    <div class="tool-header">
+                        <span class="tool-name">auto_network_discovery</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">자동 네트워크 탐색</div>
+                    <div class="tool-desc-detail">
+                        네트워크 전체를 자동으로 탐색합니다: 호스트 발견, 포트 스캔, 서비스 식별, OS 탐지.
+                        31337 모드의 정찰 단계에서 자동으로 실행되며, 발견된 모든 호스트에 대해 추가 스캔이 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">activate_31337</div>
-                    <div class="tool-desc">🔥 Activate autonomous mode</div>
+                    <div class="tool-header">
+                        <span class="tool-name">auto_scan_enhanced</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">향상된 자동 스캔</div>
+                    <div class="tool-desc-detail">
+                        여러 스캔을 병렬로 실행하고 결과를 통합합니다: nmap + nuclei + ffuf 동시 실행.
+                        31337 모드에서 매핑 단계의 핵심 도구로, 최대 속도로 공격 표면을 탐색합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">list_assessments</div>
-                    <div class="tool-desc">List all assessments</div>
+                    <div class="tool-header">
+                        <span class="tool-name">activate_31337</span>
+                        <span class="tool-badge">수동</span>
+                    </div>
+                    <div class="tool-desc-ko">31337 자율 모드 활성화 🔥</div>
+                    <div class="tool-desc-detail">
+                        31337 모드를 시작합니다. 무한 루프가 시작되며, 8단계 공격 사이클이 자동으로 반복됩니다.
+                        68개 기능이 자동으로 트리거되고, 사용자의 개입 없이 완전 자율적으로 해킹이 진행됩니다.
+                        중지 명령("그만", "멈춰", "정지", "스톱", "중단")이 있을 때까지 절대 멈추지 않습니다.
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- Enhanced Tools (25) -->
         <div class="tool-category">
             <div class="category-header">
                 <div class="category-title">⚡ Enhanced Tools</div>
                 <div class="category-count">25</div>
             </div>
-            <div class="tool-grid">
+
+            <div class="category-intro">
+                <strong>Enhanced Tools</strong>는 고급 공격 자동화 기능을 제공합니다.
+                WAF 우회를 위한 페이로드 변형, GraphQL/JWT 공격, SSTI/SSRF/XXE 자동 익스플로잇,
+                CVE 자동 매칭, 자동 피버팅, 자동 지속성 확보, 데이터베이스 자동 덤프 등
+                전문가 수준의 공격을 자동으로 수행합니다.
+                모두 31337 모드에서 자동으로 트리거됩니다.
+            </div>
+
+            <div class="tool-list">
                 <div class="tool-item">
-                    <div class="tool-name">tor_health_monitor</div>
-                    <div class="tool-desc">Monitor Tor circuit health</div>
+                    <div class="tool-header">
+                        <span class="tool-name">tor_health_monitor</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Tor 회로 상태 모니터링</div>
+                    <div class="tool-desc-detail">
+                        Tor 회로의 건강 상태를 실시간으로 모니터링합니다. 응답 속도 저하, 연결 끊김, exit node 차단 등을 감지하여
+                        자동으로 새 회로를 생성합니다. 31337 모드에서 백그라운드로 지속 실행되며, 익명화 품질을 유지합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">stealth_progress_indicator</div>
-                    <div class="tool-desc">Silent progress tracking</div>
+                    <div class="tool-header">
+                        <span class="tool-name">stealth_progress_indicator</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">스텔스 진행 상태 표시</div>
+                    <div class="tool-desc-detail">
+                        31337 모드의 진행 상태를 조용히 추적합니다. stdout 오염 없이 내부적으로 진행률을 관리하며,
+                        중요한 발견 사항만 사용자에게 보고합니다. 공격 상태를 데이터베이스에 기록하여 중단 후 재개 가능합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">auto_save_checkpoint</div>
-                    <div class="tool-desc">Auto-save attack checkpoints</div>
+                    <div class="tool-header">
+                        <span class="tool-name">auto_save_checkpoint</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">자동 체크포인트 저장</div>
+                    <div class="tool-desc-detail">
+                        31337 모드의 상태를 주기적으로 자동 저장합니다. 크래시나 중단 후에도 마지막 체크포인트부터 재개 가능합니다.
+                        현재 단계, 큐에 있는 공격 벡터, 발견한 취약점, 수집한 크레덴셜 등 모든 상태가 저장됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">tls_fingerprint_randomization</div>
-                    <div class="tool-desc">Randomize TLS fingerprints</div>
+                    <div class="tool-header">
+                        <span class="tool-name">tls_fingerprint_randomization</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">TLS 핑거프린트 무작위화</div>
+                    <div class="tool-desc-detail">
+                        TLS 핸드셰이크 시그니처를 무작위화하여 고급 핑거프린팅을 우회합니다.
+                        User-Agent와 IP 변경만으로는 우회할 수 없는 TLS 기반 탐지를 회피합니다.
+                        31337 모드에서 WAF나 고급 보안 시스템이 감지되면 자동으로 활성화됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">multi_proxy_rotation_pool</div>
-                    <div class="tool-desc">Multi-proxy pool management</div>
+                    <div class="tool-header">
+                        <span class="tool-name">multi_proxy_rotation_pool</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">다중 프록시 풀 관리</div>
+                    <div class="tool-desc-detail">
+                        50개 이상의 프록시를 동시에 관리하고, 헬스 체크를 지속적으로 수행합니다.
+                        느린 프록시, 차단된 프록시를 자동으로 제거하고 새 프록시를 추가합니다.
+                        31337 모드에서 Tor 대신 오픈 프록시를 사용할 때 핵심 역할을 합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">payload_mutation_engine</div>
-                    <div class="tool-desc">WAF bypass payload mutation</div>
+                    <div class="tool-header">
+                        <span class="tool-name">payload_mutation_engine</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">페이로드 변형 엔진 (WAF 우회)</div>
+                    <div class="tool-desc-detail">
+                        WAF가 탐지되면 페이로드를 100가지 이상의 방법으로 변형합니다:
+                        URL 인코딩, 유니코드, Hex, Double 인코딩, 주석 삽입, 대소문자 변형, 파라미터 폴루션, Null byte 등.
+                        31337 모드에서 403 에러가 반복되면 자동으로 실행되며, 우회 성공 시 해당 방법을 계속 사용합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">graphql_auto_exploit</div>
-                    <div class="tool-desc">GraphQL introspection exploit</div>
+                    <div class="tool-header">
+                        <span class="tool-name">graphql_auto_exploit</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">GraphQL 자동 익스플로잇</div>
+                    <div class="tool-desc-detail">
+                        GraphQL 엔드포인트가 발견되면 자동으로 Introspection 쿼리를 실행하여 전체 스키마를 추출합니다.
+                        모든 쿼리와 뮤테이션을 분석하고, 인증 우회, IDOR, 정보 노출 등의 취약점을 자동으로 테스트합니다.
+                        31337 모드에서 /graphql 엔드포인트 발견 시 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">jwt_crack_and_forge</div>
-                    <div class="tool-desc">JWT crack & forge attacks</div>
+                    <div class="tool-header">
+                        <span class="tool-name">jwt_crack_and_forge</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">JWT 크랙 & 위조 공격</div>
+                    <div class="tool-desc-detail">
+                        JWT 토큰이 발견되면 자동으로 취약점을 테스트합니다:
+                        약한 시크릿 크랙 (hashcat), 알고리즘 혼동 공격 (HS256 → RS256), None 알고리즘 공격,
+                        키 노출 확인 (jwks.json). 성공 시 admin 토큰을 위조하여 권한 상승을 시도합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">ssti_auto_exploit</div>
-                    <div class="tool-desc">SSTI auto-detection & exploit</div>
+                    <div class="tool-header">
+                        <span class="tool-name">ssti_auto_exploit</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">SSTI 자동 탐지 & 익스플로잇</div>
+                    <div class="tool-desc-detail">
+                        Server-Side Template Injection을 자동으로 탐지하고 익스플로잇합니다.
+                        템플릿 엔진 핑거프린팅 (Jinja2, Twig, Freemarker 등) → RCE 페이로드 자동 생성 → 명령 실행.
+                        31337 모드의 취약점 평가 단계에서 모든 입력 필드에 SSTI 페이로드를 자동 테스트합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">ssrf_to_cloud_metadata</div>
-                    <div class="tool-desc">SSRF → Cloud metadata access</div>
+                    <div class="tool-header">
+                        <span class="tool-name">ssrf_to_cloud_metadata</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">SSRF → 클라우드 메타데이터 접근</div>
+                    <div class="tool-desc-detail">
+                        SSRF 취약점이 발견되면 자동으로 클라우드 메타데이터 엔드포인트를 공격합니다:
+                        AWS (169.254.169.254), GCP (metadata.google.internal), Azure (169.254.169.254/metadata).
+                        IAM 크레덴셜을 추출하고, 이를 사용하여 추가 클라우드 리소스에 접근을 시도합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">xxe_to_lfi</div>
-                    <div class="tool-desc">XXE → LFI conversion</div>
+                    <div class="tool-header">
+                        <span class="tool-name">xxe_to_lfi</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">XXE → LFI 변환</div>
+                    <div class="tool-desc-detail">
+                        XML External Entity 취약점을 Local File Inclusion으로 확장합니다.
+                        XXE를 통해 /etc/passwd, 설정 파일, SSH 키, 소스 코드 등을 읽어냅니다.
+                        OOB (Out-of-Band) 채널을 사용하여 블라인드 XXE도 익스플로잇 가능합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">deserialization_rce</div>
-                    <div class="tool-desc">Deserialization RCE exploit</div>
+                    <div class="tool-header">
+                        <span class="tool-name">deserialization_rce</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">직렬화 해제 RCE</div>
+                    <div class="tool-desc-detail">
+                        Java, PHP, Python의 직렬화 해제(deserialization) 취약점을 자동으로 익스플로잇합니다.
+                        ysoserial (Java), phpggc (PHP), pickle (Python) 페이로드를 자동 생성하여 RCE를 달성합니다.
+                        31337 모드에서 직렬화된 데이터가 발견되면 자동으로 공격을 시도합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">http_request_smuggling</div>
-                    <div class="tool-desc">HTTP request smuggling</div>
+                    <div class="tool-header">
+                        <span class="tool-name">http_request_smuggling</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">HTTP 요청 스머글링</div>
+                    <div class="tool-desc-detail">
+                        프론트엔드와 백엔드 서버 간의 HTTP 파싱 차이를 악용합니다.
+                        TE.CL, CL.TE, TE.TE 불일치를 자동으로 탐지하고, 요청을 스머글링하여
+                        인증 우회, 캐시 포이즈닝, XSS 등을 수행합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">cve_auto_exploit</div>
-                    <div class="tool-desc">CVE auto-exploitation</div>
+                    <div class="tool-header">
+                        <span class="tool-name">cve_auto_exploit</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">CVE 자동 익스플로잇</div>
+                    <div class="tool-desc-detail">
+                        서비스 버전이 발견되면 자동으로 CVE 데이터베이스를 검색하고, 매칭되는 익스플로잇을 다운로드하여 실행합니다.
+                        Exploit-DB, GitHub PoC, Metasploit 모듈 등을 자동으로 찾아 적용합니다.
+                        31337 모드에서 버전 탐지 후 즉시 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">service_version_exploit_db</div>
-                    <div class="tool-desc">Service → Exploit-DB matching</div>
+                    <div class="tool-header">
+                        <span class="tool-name">service_version_exploit_db</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">서비스 → Exploit-DB 매칭</div>
+                    <div class="tool-desc-detail">
+                        nmap 스캔 결과를 파싱하여 각 서비스와 버전을 Exploit-DB와 자동으로 매칭합니다.
+                        searchsploit을 사용하여 사용 가능한 익스플로잇을 찾고, 타겟에 맞게 자동으로 수정하여 실행합니다.
+                        31337 모드의 익스플로잇 단계에서 핵심적인 역할을 합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">auto_pivoting</div>
-                    <div class="tool-desc">Automatic lateral movement</div>
+                    <div class="tool-header">
+                        <span class="tool-name">auto_pivoting</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">자동 피버팅 (측면 이동)</div>
+                    <div class="tool-desc-detail">
+                        시스템을 장악한 후 자동으로 내부 네트워크를 탐색하고 다른 시스템으로 이동합니다.
+                        획득한 크레덴셜을 사용하여 SSH, RDP, SMB, WinRM 등으로 자동 접근 시도.
+                        31337 모드의 측면 이동(Phase 6) 단계에서 자동으로 실행되며, 네트워크 전체를 장악합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">auto_persistence</div>
-                    <div class="tool-desc">Auto-persistence establishment</div>
+                    <div class="tool-header">
+                        <span class="tool-name">auto_persistence</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">자동 지속성 확보</div>
+                    <div class="tool-desc-detail">
+                        시스템 접근 권한을 얻으면 자동으로 지속성(persistence)을 확보합니다:
+                        SSH 키 추가, cron 작업 생성, systemd 서비스 등록, 백도어 설치.
+                        재부팅 후에도 접근 가능하도록 하며, 31337 모드의 사후 공격(Phase 5) 단계에서 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">config_file_hunter</div>
-                    <div class="tool-desc">Config file discovery</div>
+                    <div class="tool-header">
+                        <span class="tool-name">config_file_hunter</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">설정 파일 탐색</div>
+                    <div class="tool-desc-detail">
+                        시스템에서 중요한 설정 파일을 자동으로 찾습니다:
+                        .env, config.php, settings.py, application.properties, web.config 등.
+                        발견된 파일에서 데이터베이스 크레덴셜, API 키, 시크릿 키 등을 자동으로 추출합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">database_auto_dump</div>
-                    <div class="tool-desc">Database auto-dump</div>
+                    <div class="tool-header">
+                        <span class="tool-name">database_auto_dump</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">데이터베이스 자동 덤프</div>
+                    <div class="tool-desc-detail">
+                        데이터베이스 접근 권한을 얻으면 자동으로 전체 데이터를 덤프합니다:
+                        MySQL, PostgreSQL, MongoDB, Redis 등 모든 주요 DB 지원.
+                        테이블 구조 분석 → 민감 데이터 식별 (users, passwords, credit_cards) → 우선순위 덤프.
+                        31337 모드의 데이터 유출(Phase 8) 단계에서 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">git_repository_cloner</div>
-                    <div class="tool-desc">.git exposure → auto-clone</div>
+                    <div class="tool-header">
+                        <span class="tool-name">git_repository_cloner</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">.git 노출 → 자동 복제</div>
+                    <div class="tool-desc-detail">
+                        .git 디렉토리가 노출된 경우 자동으로 전체 저장소를 복제합니다.
+                        소스 코드를 추출하고, 커밋 히스토리에서 삭제된 크레덴셜이나 민감 정보를 찾습니다.
+                        복제된 코드는 자동으로 shannon_whitebox_scan으로 넘어가 정적 분석이 수행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">default_credential_massive_test</div>
-                    <div class="tool-desc">Massive default cred testing</div>
+                    <div class="tool-header">
+                        <span class="tool-name">default_credential_massive_test</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">대량 기본 크레덴셜 테스트</div>
+                    <div class="tool-desc-detail">
+                        1000개 이상의 기본 크레덴셜을 모든 발견된 서비스에 자동으로 테스트합니다:
+                        admin/admin, root/toor, admin/password 등 기기별, 서비스별 기본 크레덴셜 포함.
+                        31337 모드에서 새 서비스가 발견되면 즉시 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">rtsp_stream_hijacking</div>
-                    <div class="tool-desc">RTSP stream hijacking</div>
+                    <div class="tool-header">
+                        <span class="tool-name">rtsp_stream_hijacking</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">RTSP 스트림 하이재킹</div>
+                    <div class="tool-desc-detail">
+                        RTSP 스트림을 탈취하여 비디오를 녹화하거나 실시간으로 확인합니다.
+                        인증되지 않은 스트림이나 약한 크레덴셜을 사용하는 카메라를 자동으로 익스플로잇합니다.
+                        IP 카메라가 발견되면 자동으로 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">shodan_censys_integration</div>
-                    <div class="tool-desc">Shodan/Censys API integration</div>
+                    <div class="tool-header">
+                        <span class="tool-name">shodan_censys_integration</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Shodan/Censys API 통합</div>
+                    <div class="tool-desc-detail">
+                        Shodan과 Censys API를 사용하여 대량 정찰을 수행합니다.
+                        타겟 조직의 모든 노출된 자산을 찾고, 취약한 서비스, 오픈 포트, 잘못된 설정을 자동으로 식별합니다.
+                        31337 모드의 정찰 단계에서 API 키가 설정되어 있으면 자동으로 사용됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">onvif_protocol_exploit</div>
-                    <div class="tool-desc">ONVIF protocol exploitation</div>
+                    <div class="tool-header">
+                        <span class="tool-name">onvif_protocol_exploit</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">ONVIF 프로토콜 익스플로잇</div>
+                    <div class="tool-desc-detail">
+                        IP 카메라의 ONVIF 프로토콜을 공격합니다. 기기 정보 추출, 카메라 제어, 스트림 URL 획득.
+                        ONVIF 인증 우회, 기본 크레덴셜 테스트, 펌웨어 다운로드 등을 자동으로 수행합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">firmware_auto_extract</div>
-                    <div class="tool-desc">Firmware auto-extraction</div>
+                    <div class="tool-header">
+                        <span class="tool-name">firmware_auto_extract</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">펌웨어 자동 추출</div>
+                    <div class="tool-desc-detail">
+                        펌웨어 파일을 발견하면 자동으로 추출하고 분석합니다:
+                        binwalk로 파일시스템 추출 → strings로 크레덴셜 검색 → 취약한 바이너리 식별.
+                        IoT 기기나 임베디드 시스템 공격 시 자동으로 실행됩니다.
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- Advanced Tools (17) -->
         <div class="tool-category">
             <div class="category-header">
                 <div class="category-title">🚀 Advanced Tools</div>
                 <div class="category-count">17</div>
             </div>
-            <div class="tool-grid">
+
+            <div class="category-intro">
+                <strong>Advanced Tools</strong>는 2026.08.08에 추가된 최신 기능들입니다.
+                NoSQL/Redis/Elasticsearch 공격, API Rate Limit 우회, WebSocket 인젝션, CORS 익스플로잇,
+                폴리글랏 페이로드, 블라인드 공격 자동화, Race Condition 익스플로잇,
+                취약점 체인 그래프 생성, 컨텍스트 기반 공격 선택 등
+                최첨단 공격 기술을 자동화합니다. 모두 31337 모드에서 자동으로 트리거됩니다.
+            </div>
+
+            <div class="tool-list">
                 <div class="tool-item">
-                    <div class="tool-name">mongodb_nosql_injection</div>
-                    <div class="tool-desc">MongoDB NoSQL injection chain</div>
+                    <div class="tool-header">
+                        <span class="tool-name">mongodb_nosql_injection</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">MongoDB NoSQL 인젝션 체인</div>
+                    <div class="tool-desc-detail">
+                        MongoDB를 사용하는 애플리케이션에서 NoSQL 인젝션을 자동으로 수행합니다:
+                        인증 우회 ($ne, $gt), 데이터 추출 ($regex), 전체 DB 덤프.
+                        JSON 파라미터에 특수 오퍼레이터를 주입하여 쿼리를 조작합니다.
+                        31337 모드의 취약점 평가 단계에서 MongoDB가 탐지되면 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">redis_memcached_exploit</div>
-                    <div class="tool-desc">Redis/Memcached unauth RCE</div>
+                    <div class="tool-header">
+                        <span class="tool-name">redis_memcached_exploit</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Redis/Memcached 무인증 RCE</div>
+                    <div class="tool-desc-detail">
+                        인증 없이 노출된 Redis나 Memcached를 익스플로잇합니다:
+                        Redis: cron 작업 생성으로 RCE, SSH 키 주입, 웹쉘 업로드.
+                        Memcached: 캐시 포이즈닝, 세션 하이재킹, 데이터 덤프.
+                        포트 6379(Redis), 11211(Memcached)이 발견되면 자동으로 공격합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">elasticsearch_unauth_access</div>
-                    <div class="tool-desc">Elasticsearch data dump</div>
+                    <div class="tool-header">
+                        <span class="tool-name">elasticsearch_unauth_access</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Elasticsearch 데이터 덤프</div>
+                    <div class="tool-desc-detail">
+                        인증 없이 노출된 Elasticsearch에서 데이터를 추출합니다:
+                        인덱스 목록 → 민감 데이터 식별 (users, logs, documents) → 전체 덤프.
+                        포트 9200이 발견되고 인증이 없으면 자동으로 모든 데이터를 다운로드합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">api_rate_limit_bypass_engine</div>
-                    <div class="tool-desc">Intelligent rate limit bypass</div>
+                    <div class="tool-header">
+                        <span class="tool-name">api_rate_limit_bypass_engine</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">지능형 Rate Limit 우회</div>
+                    <div class="tool-desc-detail">
+                        API Rate Limit을 우회하기 위해 여러 기법을 자동으로 시도합니다:
+                        헤더 조작 (X-Forwarded-For, X-Real-IP), 프록시 로테이션, 적응형 스로틀링.
+                        Rate Limit을 학습하여 최적의 요청 속도를 유지하면서 탐지를 회피합니다.
+                        31337 모드에서 429 에러가 반복되면 자동으로 활성화됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">websocket_injection_scanner</div>
-                    <div class="tool-desc">WebSocket injection scanner</div>
+                    <div class="tool-header">
+                        <span class="tool-name">websocket_injection_scanner</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">WebSocket 인젝션 스캐너</div>
+                    <div class="tool-desc-detail">
+                        WebSocket 연결에서 인젝션 취약점을 자동으로 테스트합니다:
+                        Command Injection, SQL Injection, XSS 페이로드를 WebSocket 메시지에 주입.
+                        실시간 통신 환경에서의 취약점을 탐지하며, WebSocket 엔드포인트가 발견되면 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">cors_misconfiguration_exploit</div>
-                    <div class="tool-desc">CORS misconfiguration exploit</div>
+                    <div class="tool-header">
+                        <span class="tool-name">cors_misconfiguration_exploit</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">CORS 잘못된 설정 익스플로잇</div>
+                    <div class="tool-desc-detail">
+                        CORS 설정 오류를 자동으로 탐지하고 익스플로잇합니다:
+                        Reflected Origin, Null Origin, 와일드카드 서브도메인 등을 테스트.
+                        PoC HTML을 자동 생성하여 크레덴셜 유출, 데이터 탈취를 시연합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">oauth_oidc_flow_vulnerability</div>
-                    <div class="tool-desc">OAuth/OIDC flow vulnerability</div>
+                    <div class="tool-header">
+                        <span class="tool-name">oauth_oidc_flow_vulnerability</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">OAuth/OIDC 플로우 취약점</div>
+                    <div class="tool-desc-detail">
+                        OAuth 2.0 및 OpenID Connect의 취약점을 자동으로 테스트합니다:
+                        redirect_uri 조작, state 파라미터 우회, CSRF, 토큰 탈취.
+                        계정 탈취(Account Takeover)를 목표로 하며, OAuth 플로우가 발견되면 자동 실행됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">polyglot_payload_engine</div>
-                    <div class="tool-desc">Multi-context polyglot payloads</div>
+                    <div class="tool-header">
+                        <span class="tool-name">polyglot_payload_engine</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">폴리글랏 페이로드 엔진</div>
+                    <div class="tool-desc-detail">
+                        여러 컨텍스트에서 동시에 작동하는 폴리글랏 페이로드를 생성합니다:
+                        SQLi + XSS + SSTI가 동시에 트리거되는 페이로드.
+                        필터링을 우회하면서 최대 영향력을 발휘합니다.
+                        31337 모드의 취약점 평가 단계에서 자동으로 폴리글랏 페이로드를 테스트합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">blind_attack_automation</div>
-                    <div class="tool-desc">Time-based blind attack automation</div>
+                    <div class="tool-header">
+                        <span class="tool-name">blind_attack_automation</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">블라인드 공격 자동화</div>
+                    <div class="tool-desc-detail">
+                        시간 기반 및 OOB(Out-of-Band) 채널을 사용하는 블라인드 공격을 자동화합니다:
+                        Blind SQLi (시간 지연), Blind XXE (외부 서버 콜백), Blind SSRF.
+                        응답이 없거나 에러가 숨겨진 경우에도 취약점을 탐지하고 데이터를 추출합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">race_condition_exploit</div>
-                    <div class="tool-desc">Race condition detection & exploit</div>
+                    <div class="tool-header">
+                        <span class="tool-name">race_condition_exploit</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">Race Condition 익스플로잇</div>
+                    <div class="tool-desc-detail">
+                        Race Condition 취약점을 자동으로 탐지하고 익스플로잇합니다:
+                        결제 시스템 (중복 할인), 쿠폰 (다중 사용), 권한 상승 (동시 요청).
+                        10개 이상의 동시 요청을 정밀한 타이밍으로 전송하여 경쟁 상태를 유발합니다.
+                        31337 모드의 익스플로잇 단계에서 중요 트랜잭션에 대해 자동 테스트됩니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">credential_reuse_enhanced</div>
-                    <div class="tool-desc">Enhanced credential reuse + learning</div>
+                    <div class="tool-header">
+                        <span class="tool-name">credential_reuse_enhanced</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">향상된 크레덴셜 재사용 + 학습</div>
+                    <div class="tool-desc-detail">
+                        발견한 크레덴셜을 모든 서비스에 테스트할 뿐만 아니라, 패턴을 학습합니다:
+                        admin123 발견 → admin456, admin789 자동 생성 및 테스트.
+                        성공 패턴을 데이터베이스에 저장하여 다음 평가에서 재사용합니다.
+                        31337 모드의 핵심 기능으로, 크레덴셜 하나로 전체 네트워크를 장악할 수 있습니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">source_code_auto_mapping</div>
-                    <div class="tool-desc">Source → vulnerability mapping</div>
+                    <div class="tool-header">
+                        <span class="tool-name">source_code_auto_mapping</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">소스 코드 → 취약점 자동 매핑</div>
+                    <div class="tool-desc-detail">
+                        Semgrep으로 스캔한 소스 코드의 취약점을 실제 라이브 엔드포인트와 자동으로 매핑합니다:
+                        코드에서 SQLi 발견 → 해당 엔드포인트 식별 → 실제 익스플로잇 생성 및 실행.
+                        화이트박스(소스 코드)와 블랙박스(실제 애플리케이션)를 결합하여 최대 효율을 달성합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">api_schema_fuzzing_advanced</div>
-                    <div class="tool-desc">Advanced API schema fuzzing</div>
+                    <div class="tool-header">
+                        <span class="tool-name">api_schema_fuzzing_advanced</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">고급 API 스키마 퍼징</div>
+                    <div class="tool-desc-detail">
+                        OpenAPI, GraphQL, gRPC, SOAP 등 모든 API 스키마를 자동으로 퍼징합니다:
+                        스키마에서 모든 엔드포인트, 파라미터, 타입을 추출 → 경계값, 타입 오류, 인증 우회 테스트.
+                        31337 모드에서 API 스키마가 발견되면 자동으로 전체 API 표면을 퍼징합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">vulnerability_chain_graph</div>
-                    <div class="tool-desc">Vulnerability chain graph engine</div>
+                    <div class="tool-header">
+                        <span class="tool-name">vulnerability_chain_graph</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">취약점 체인 그래프 엔진</div>
+                    <div class="tool-desc-detail">
+                        발견한 모든 취약점을 그래프로 연결하여 최적의 공격 경로를 찾습니다:
+                        SQLi → DB 크레덴셜 → SSH → Privesc → Root (5단계 체인).
+                        그래프 알고리즘으로 가장 빠르고 효과적인 경로를 계산하여 자동으로 실행합니다.
+                        31337 모드의 사후 공격 단계에서 전체 공격을 최적화합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">context_aware_attack_engine</div>
-                    <div class="tool-desc">Context-aware attack selection</div>
+                    <div class="tool-header">
+                        <span class="tool-name">context_aware_attack_engine</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">컨텍스트 기반 공격 선택</div>
+                    <div class="tool-desc-detail">
+                        타겟의 기술 스택을 분석하여 관련 공격만 선택적으로 실행합니다:
+                        Laravel 탐지 → Laravel 특화 공격만 실행 (일반 PHP 공격 스킵).
+                        시간을 10배 절약하면서 정확도는 높입니다.
+                        31337 모드의 정찰 단계에서 컨텍스트를 파악하고, 모든 후속 단계에서 맞춤형 공격을 수행합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">multi_vector_orchestration</div>
-                    <div class="tool-desc">Multi-vector attack orchestration</div>
+                    <div class="tool-header">
+                        <span class="tool-name">multi_vector_orchestration</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">다중 벡터 오케스트레이션</div>
+                    <div class="tool-desc-detail">
+                        여러 공격 벡터를 동시에 조합하여 최대 영향력을 발휘합니다:
+                        SSRF + XXE 결합, XSS + CSRF 체이닝, SQLi + 파일 업로드 조합.
+                        단일 취약점으로는 불가능한 공격을 다중 벡터 조합으로 달성합니다.
+                        31337 모드에서 여러 취약점이 발견되면 자동으로 최적의 조합을 찾아 실행합니다.
+                    </div>
                 </div>
+
                 <div class="tool-item">
-                    <div class="tool-name">intelligent_retry_engine</div>
-                    <div class="tool-desc">Intelligent exploit retry engine</div>
+                    <div class="tool-header">
+                        <span class="tool-name">intelligent_retry_engine</span>
+                        <span class="tool-badge">자동</span>
+                    </div>
+                    <div class="tool-desc-ko">지능형 재시도 엔진</div>
+                    <div class="tool-desc-detail">
+                        익스플로잇이 실패하면 실패 원인을 분석하고 대안을 자동으로 생성합니다:
+                        SQLi 실패 → 인코딩 변경, 다른 SQL 방언 시도, 파라미터 위치 변경.
+                        10가지 이상의 변형을 자동으로 시도하며, 성공할 때까지 포기하지 않습니다.
+                        31337 모드의 "Never-Stop Protocol"과 결합되어 모든 공격에 적용됩니다.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- 68 31337 FEATURES -->
     <section class="container">
-        <h2 class="section-title">🔥 68 31337 Features</h2>
-        <p class="section-subtitle">Autonomous Attack Features with Auto-Trigger Integration</p>
+        <h2 class="section-title">🔥 68개 31337 Features</h2>
+        <p class="section-subtitle">31337 모드에서 자동으로 트리거되는 자율 공격 기능</p>
+
+        <div class="section-intro">
+            <p style="margin-bottom: 1rem;">
+                <strong>31337 Features</strong>는 77개 MCP Tools 중 자동으로 트리거되는 68개의 기능입니다.
+                나머지 9개(assessment 관리 도구)는 수동으로 사용됩니다.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                31337 모드를 활성화하면 무한 루프가 시작되며, 8단계 공격 사이클
+                (정찰 → 매핑 → 취약점 평가 → 익스플로잇 → 사후 공격 → 측면 이동 → 권한 상승 → 데이터 유출)을
+                사용자의 개입 없이 자동으로 반복합니다.
+            </p>
+            <p>
+                <strong>"그만", "멈춰", "정지", "스톱", "중단"</strong> 중 하나를 명시적으로 말할 때까지 절대 멈추지 않습니다.
+            </p>
+        </div>
 
         <div class="ascii-art">
             <pre>
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          31337 MODE: INFINITE ATTACK LOOP                       │
+│                          31337 MODE: 무한 공격 루프                              │
 └─────────────────────────────────────────────────────────────────────────────────┘
 
     ┌──────────────────────────────────────────────────────────────────────┐
+    │                        8단계 공격 사이클 (무한 반복)                   │
     │                                                                      │
     │    Phase 1          Phase 2         Phase 3            Phase 4      │
     │  Reconnaissance  →  Mapping    →  Vulnerability   →  Exploitation  │
-    │                                   Assessment                         │
-    │    • Subdomain      • Directory   • SQLi              • Exploit     │
-    │    • Port Scan      • API Enum    • XSS               • Shell       │
-    │    • Tech Stack     • Endpoint    • SSRF              • Pivot       │
-    │    • SSL/TLS        • Fuzzing     • NoSQL             • Escalate    │
+    │   (정찰)            (매핑)          Assessment          (익스플로잇)   │
+    │                                   (취약점 평가)                       │
+    │    • 서브도메인      • 디렉토리     • SQLi              • 익스플로잇  │
+    │    • 포트 스캔      • API 열거     • XSS               • 쉘 획득    │
+    │    • 기술 스택      • 엔드포인트   • SSRF              • 피버팅     │
+    │    • SSL/TLS       • 퍼징         • NoSQL             • 권한 상승   │
     │                                   • SSTI                             │
     │         ▲                                                   │        │
     │         │                                                   ▼        │
     │    Phase 8          Phase 7         Phase 6            Phase 5      │
     │  Data Exfil    ←  Privilege    ←   Lateral      ←  Post-Exploit   │
-    │                   Escalation       Movement                         │
-    │    • DB Dump        • Privesc      • Network      • Config Hunt    │
-    │    • Backup         • Root         • Pivot        • Cred Extract   │
-    │    • Files          • Container    • SSH          • Persistence    │
-    │    • Credentials    • Cloud        • RDP          • DB Access      │
+    │  (데이터 유출)     Escalation       Movement        (사후 공격)      │
+    │                   (권한 상승)       (측면 이동)                       │
+    │    • DB 덤프        • Privesc      • 네트워크 스캔  • 설정 탐색     │
+    │    • 백업           • Root         • 피버팅        • 크레덴셜 추출  │
+    │    • 파일           • 컨테이너     • SSH           • 지속성 확보    │
+    │    • 크레덴셜       • 클라우드     • RDP           • DB 접근        │
     │                                                                      │
     └──────────────────────────────────────────────────────────────────────┘
 
-                        ∞ NEVER STOPS UNTIL "그만" ∞
+                        ∞ "그만"이라고 말할 때까지 절대 안 멈춤 ∞
 
     [Enhanced Hook - 25 Features]      [Advanced Hook - 17 Features]
               ▼                                     ▼
-         Auto-trigger                          Auto-trigger
-         every phase                           every phase
+         매 단계마다 자동 트리거              매 단계마다 자동 트리거
 </pre>
         </div>
 
-        <!-- Core Features (26) -->
         <div class="card">
-            <h3 class="card-title">⚙️ Core 31337 Features (26)</h3>
-            <ul class="feature-list">
-                <li class="feature-item">
-                    <span class="feature-number">1</span>
-                    <div>
-                        <div class="feature-title">Anti-Textbook Attacks</div>
-                        <div class="feature-desc">Custom Python scripts instead of nmap/sqlmap - 90%+ WAF evasion</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">2</span>
-                    <div>
-                        <div class="feature-title">Credential Auto-Reuse</div>
-                        <div class="feature-desc">Discovered credentials tested on ALL services automatically</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">3</span>
-                    <div>
-                        <div class="feature-title">Resource All-In Parallelism</div>
-                        <div class="feature-desc">Unlimited threads, concurrent requests, maximum speed</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">4</span>
-                    <div>
-                        <div class="feature-title">Dynamic Background Tasks</div>
-                        <div class="feature-desc">Non-blocking async execution, never wait</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">5</span>
-                    <div>
-                        <div class="feature-title">Infinite Loop (8-Phase Cycle)</div>
-                        <div class="feature-desc">Recon → Mapping → Vuln → Exploit → Post → Lateral → Privesc → Exfil → REPEAT</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">6</span>
-                    <div>
-                        <div class="feature-title">Never-Stop Protocol</div>
-                        <div class="feature-desc">Only stops when explicitly commanded: "그만", "멈춰", "정지", "스톱", "중단"</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">7</span>
-                    <div>
-                        <div class="feature-title">Module Auto-Launch</div>
-                        <div class="feature-desc">Shell obtained → Auto privesc | .git found → Auto shannon scan</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">8</span>
-                    <div>
-                        <div class="feature-title">Self-Criticism Loop</div>
-                        <div class="feature-desc">Attack failed → Analyze → Redesign → Retry with new approach</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">9</span>
-                    <div>
-                        <div class="feature-title">Kill Chain Auto-Chaining</div>
-                        <div class="feature-desc">SQLi → DB → Creds → SSH → Privesc → Root (automatic 5-step chain)</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">10</span>
-                    <div>
-                        <div class="feature-title">Tor IP Rotation</div>
-                        <div class="feature-desc">Automatic rotation every 10 requests + ban detection</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">11</span>
-                    <div>
-                        <div class="feature-title">WAF Bypass Auto-Detection</div>
-                        <div class="feature-desc">403 detected → URL encode → Unicode → Hex → Comment injection (automatic)</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">12</span>
-                    <div>
-                        <div class="feature-title">Rate Limit Auto-Adaptation</div>
-                        <div class="feature-desc">429 detected → IP rotation → Exponential backoff → Retry</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">13</span>
-                    <div>
-                        <div class="feature-title">Evidence Chain-of-Custody</div>
-                        <div class="feature-desc">Every action logged with SHA256, timestamp, reproducible proof</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">14</span>
-                    <div>
-                        <div class="feature-title">Exploit-DB Auto-Integration</div>
-                        <div class="feature-desc">Service version detected → searchsploit → download → adapt → execute</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">15</span>
-                    <div>
-                        <div class="feature-title">Deep Web Crawling (JS Execution)</div>
-                        <div class="feature-desc">Selenium-based crawling - discovers AJAX endpoints missed by static crawlers</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">16</span>
-                    <div>
-                        <div class="feature-title">API Schema Auto-Discovery</div>
-                        <div class="feature-desc">Auto-check /swagger.json, /openapi.json, /graphql introspection</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">17</span>
-                    <div>
-                        <div class="feature-title">Cloud Metadata Exploitation</div>
-                        <div class="feature-desc">Auto-test AWS/GCP/Azure metadata endpoints - extract IAM credentials</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">18</span>
-                    <div>
-                        <div class="feature-title">Subdomain Takeover Auto-Exploit</div>
-                        <div class="feature-desc">Dangling CNAME detected → Auto-takeover attempt (GitHub Pages, S3, etc.)</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">19</span>
-                    <div>
-                        <div class="feature-title">Container/K8s Escape</div>
-                        <div class="feature-desc">Docker socket check → Privileged mode → Host mount → K8s token → Escape</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">20</span>
-                    <div>
-                        <div class="feature-title">Learning Database</div>
-                        <div class="feature-desc">Successful attacks saved → Pattern recognition → Auto-apply to similar targets</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">21</span>
-                    <div>
-                        <div class="feature-title">AI Custom Exploit Generation</div>
-                        <div class="feature-desc">No public exploit? → AI generates custom exploit code → Execute</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">22</span>
-                    <div>
-                        <div class="feature-title">Rate Limit Intelligence</div>
-                        <div class="feature-desc">Learn rate limits per target → Optimize request rate → Save for next time</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">23</span>
-                    <div>
-                        <div class="feature-title">Binary/Firmware Analysis</div>
-                        <div class="feature-desc">Binary found → Extract strings → Ghidra decompile → Extract API endpoints</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">24</span>
-                    <div>
-                        <div class="feature-title">Evidence Extended</div>
-                        <div class="feature-desc">Complete chain-of-custody: SHA256, timestamps, reproducible commands, PCAP</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">25</span>
-                    <div>
-                        <div class="feature-title">Social Engineering Automation</div>
-                        <div class="feature-desc">Email discovered → OSINT → Password patterns → Generate wordlist → Attack</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">26</span>
-                    <div>
-                        <div class="feature-title">Network Speed Auto-Adaptation</div>
-                        <div class="feature-desc">Slow network detected → Auto-adjust request intervals → Optimize timing</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+            <h3 class="card-title" style="font-size: 2rem; margin-bottom: 2rem;">📊 68개 Features 전체 목록</h3>
+            
+            <div style="background: var(--dark-panel); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                <h4 style="color: var(--cyber-green); font-size: 1.5rem; margin-bottom: 1rem;">⚙️ Core 31337 Features (26개)</h4>
+                <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+                    31337 모드의 기본 동작을 정의하는 핵심 기능들입니다. 무한 루프, 자동 체이닝, 익명화, WAF 우회 등 자율 해킹의 근간을 이룹니다.
+                </p>
+                <ol style="color: var(--text-primary); line-height: 2; margin-left: 2rem;">
+                    <li><strong>Anti-Textbook Attacks</strong> — 교과서적 도구 대신 커스텀 Python 스크립트 사용 (WAF 회피율 90%+)</li>
+                    <li><strong>Credential Auto-Reuse</strong> — 발견한 크레덴셜을 모든 서비스에 자동 테스트</li>
+                    <li><strong>Resource All-In Parallelism</strong> — 무제한 병렬 처리, 최대 속도 공격</li>
+                    <li><strong>Dynamic Background Tasks</strong> — 논블로킹 비동기 실행, 절대 대기 안 함</li>
+                    <li><strong>Infinite Loop (8-Phase Cycle)</strong> — 8단계 사이클 무한 반복</li>
+                    <li><strong>Never-Stop Protocol</strong> — 5개 중지 명령어만 인식, 그 외엔 절대 안 멈춤</li>
+                    <li><strong>Module Auto-Launch</strong> — 쉘 획득 → privesc 자동 실행 | .git 발견 → shannon 자동 실행</li>
+                    <li><strong>Self-Criticism Loop</strong> — 공격 실패 → 원인 분석 → 재설계 → 재시도</li>
+                    <li><strong>Kill Chain Auto-Chaining</strong> — SQLi → DB → Creds → SSH → Privesc → Root (자동 5단계)</li>
+                    <li><strong>Tor IP Rotation</strong> — 10개 요청마다 자동 IP 변경 + 밴 감지 시 즉시 변경</li>
+                    <li><strong>WAF Bypass Auto-Detection</strong> — 403 감지 → 자동 인코딩 (URL/Unicode/Hex/Comment injection)</li>
+                    <li><strong>Rate Limit Auto-Adaptation</strong> — 429 감지 → IP 변경 + Exponential backoff</li>
+                    <li><strong>Evidence Chain-of-Custody</strong> — 모든 행동 SHA256 해시 + 타임스탬프 + 재현 가능한 증거</li>
+                    <li><strong>Exploit-DB Auto-Integration</strong> — 서비스 버전 → searchsploit → 다운로드 → 실행</li>
+                    <li><strong>Deep Web Crawling (JS Execution)</strong> — Selenium 기반, AJAX 엔드포인트 탐지</li>
+                    <li><strong>API Schema Auto-Discovery</strong> — /swagger.json, /openapi.json, /graphql 자동 체크</li>
+                    <li><strong>Cloud Metadata Exploitation</strong> — AWS/GCP/Azure 메타데이터 엔드포인트 자동 공격</li>
+                    <li><strong>Subdomain Takeover Auto-Exploit</strong> — Dangling CNAME → GitHub Pages/S3 자동 장악</li>
+                    <li><strong>Container/K8s Escape</strong> — Docker 소켓 → Privileged → Host mount → K8s 토큰 → 탈출</li>
+                    <li><strong>Learning Database</strong> — 성공 패턴 저장 → 유사 타겟에 자동 적용</li>
+                    <li><strong>AI Custom Exploit Generation</strong> — 공개 익스플로잇 없음 → AI가 커스텀 코드 생성</li>
+                    <li><strong>Rate Limit Intelligence</strong> — 타겟별 Rate Limit 학습 → 최적 요청 속도 유지</li>
+                    <li><strong>Binary/Firmware Analysis</strong> — binwalk 추출 → strings → Ghidra 디컴파일</li>
+                    <li><strong>Evidence Extended</strong> — 완전한 증거 사슬: SHA256 + 타임스탬프 + 명령어 + PCAP</li>
+                    <li><strong>Social Engineering Automation</strong> — 이메일 → OSINT → 패스워드 패턴 → 워드리스트 생성</li>
+                    <li><strong>Network Speed Auto-Adaptation</strong> — 네트워크 속도 감지 → 요청 간격 자동 조정</li>
+                </ol>
+            </div>
 
-        <!-- Enhanced Features (25) -->
-        <div class="card">
-            <h3 class="card-title">⚡ Enhanced 31337 Features (25)</h3>
-            <p style="color: var(--text-dim); margin-bottom: 1rem;">Auto-triggered via Enhanced Hook in 31337 mode</p>
-            <ul class="feature-list">
-                <li class="feature-item">
-                    <span class="feature-number">27</span>
-                    <div>
-                        <div class="feature-title">Tor Health Monitor</div>
-                        <div class="feature-desc">Real-time Tor circuit monitoring → Auto-rotate on degradation</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">28</span>
-                    <div>
-                        <div class="feature-title">Stealth Progress Indicator</div>
-                        <div class="feature-desc">Silent progress tracking - no stdout pollution</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">29</span>
-                    <div>
-                        <div class="feature-title">Auto-Save Checkpoint</div>
-                        <div class="feature-desc">Automatic attack state checkpoints - resume on failure</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">30</span>
-                    <div>
-                        <div class="feature-title">TLS Fingerprint Randomization</div>
-                        <div class="feature-desc">Randomize TLS fingerprints to evade detection</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">31</span>
-                    <div>
-                        <div class="feature-title">Multi-Proxy Rotation Pool</div>
-                        <div class="feature-desc">50+ proxy pool management with health checks</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">32</span>
-                    <div>
-                        <div class="feature-title">Payload Mutation Engine</div>
-                        <div class="feature-desc">WAF detected → Generate 100+ payload mutations automatically</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">33</span>
-                    <div>
-                        <div class="feature-title">GraphQL Auto-Exploit</div>
-                        <div class="feature-desc">GraphQL introspection → Extract schema → Auto-generate exploits</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">34</span>
-                    <div>
-                        <div class="feature-title">JWT Crack & Forge</div>
-                        <div class="feature-desc">JWT token → Crack secret → Forge admin token → Privilege escalation</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">35</span>
-                    <div>
-                        <div class="feature-title">SSTI Auto-Exploit</div>
-                        <div class="feature-desc">Template injection detection → Engine fingerprint → RCE exploit</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">36</span>
-                    <div>
-                        <div class="feature-title">SSRF to Cloud Metadata</div>
-                        <div class="feature-desc">SSRF found → Auto-attempt AWS/GCP/Azure metadata access</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">37</span>
-                    <div>
-                        <div class="feature-title">XXE to LFI</div>
-                        <div class="feature-desc">XXE vulnerability → Convert to LFI → Read system files</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">38</span>
-                    <div>
-                        <div class="feature-title">Deserialization RCE</div>
-                        <div class="feature-desc">Java/PHP/Python deserialization → Auto-generate RCE payload</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">39</span>
-                    <div>
-                        <div class="feature-title">HTTP Request Smuggling</div>
-                        <div class="feature-desc">Auto-detect TE.CL/CL.TE discrepancies → Smuggle requests</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">40</span>
-                    <div>
-                        <div class="feature-title">CVE Auto-Exploit</div>
-                        <div class="feature-desc">Service version → CVE search → Auto-download exploit → Execute</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">41</span>
-                    <div>
-                        <div class="feature-title">Service → Exploit-DB Matching</div>
-                        <div class="feature-desc">Nmap output → Parse versions → Match Exploit-DB → Auto-exploit</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">42</span>
-                    <div>
-                        <div class="feature-title">Auto-Pivoting</div>
-                        <div class="feature-desc">Credentials found → Test on internal network → Lateral movement</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">43</span>
-                    <div>
-                        <div class="feature-title">Auto-Persistence</div>
-                        <div class="feature-desc">Root access → Establish persistence (cron, SSH keys, backdoors)</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">44</span>
-                    <div>
-                        <div class="feature-title">Config File Hunter</div>
-                        <div class="feature-desc">Auto-search for config.php, .env, settings.py → Extract secrets</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">45</span>
-                    <div>
-                        <div class="feature-title">Database Auto-Dump</div>
-                        <div class="feature-desc">DB access → Auto-dump all tables → Extract sensitive data</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">46</span>
-                    <div>
-                        <div class="feature-title">Git Repository Cloner</div>
-                        <div class="feature-desc">.git exposed → Auto-clone → Extract source code → Static analysis</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">47</span>
-                    <div>
-                        <div class="feature-title">Default Credential Massive Test</div>
-                        <div class="feature-desc">Test 1000+ default credentials on all discovered services</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">48</span>
-                    <div>
-                        <div class="feature-title">RTSP Stream Hijacking</div>
-                        <div class="feature-desc">RTSP stream detected → Hijack → Record → Extract credentials</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">49</span>
-                    <div>
-                        <div class="feature-title">Shodan/Censys Integration</div>
-                        <div class="feature-desc">API integration → Mass reconnaissance → Target discovery</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">50</span>
-                    <div>
-                        <div class="feature-title">ONVIF Protocol Exploit</div>
-                        <div class="feature-desc">IP camera ONVIF → Extract device info → Control camera</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">51</span>
-                    <div>
-                        <div class="feature-title">Firmware Auto-Extract</div>
-                        <div class="feature-desc">Firmware file → binwalk → Extract filesystem → Find secrets</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+            <div style="background: var(--dark-panel); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                <h4 style="color: var(--cyber-blue); font-size: 1.5rem; margin-bottom: 1rem;">⚡ Enhanced 31337 Features (25개)</h4>
+                <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+                    고급 공격 자동화 기능입니다. GraphQL, JWT, SSTI, SSRF, XXE, Deserialization, HTTP Smuggling, CVE 자동 익스플로잇, 
+                    자동 피버팅, 자동 지속성 확보, DB 자동 덤프 등 전문가 수준의 공격을 완전 자동화합니다.
+                </p>
+                <ol start="27" style="color: var(--text-primary); line-height: 2; margin-left: 2rem;">
+                    <li><strong>Tor Health Monitor</strong> — Tor 회로 실시간 모니터링, 품질 저하 시 자동 교체</li>
+                    <li><strong>Stealth Progress Indicator</strong> — 스텔스 진행 추적, stdout 오염 없음</li>
+                    <li><strong>Auto-Save Checkpoint</strong> — 공격 상태 자동 저장, 중단 후 재개 가능</li>
+                    <li><strong>TLS Fingerprint Randomization</strong> — TLS 시그니처 무작위화, 고급 핑거프린팅 회피</li>
+                    <li><strong>Multi-Proxy Rotation Pool</strong> — 50+ 프록시 풀 관리, 자동 헬스 체크</li>
+                    <li><strong>Payload Mutation Engine</strong> — WAF 감지 → 100+ 페이로드 변형 자동 생성</li>
+                    <li><strong>GraphQL Auto-Exploit</strong> — Introspection → 스키마 추출 → 자동 익스플로잇</li>
+                    <li><strong>JWT Crack & Forge</strong> — 약한 시크릿 크랙 → admin 토큰 위조 → 권한 상승</li>
+                    <li><strong>SSTI Auto-Exploit</strong> — 템플릿 엔진 핑거프린팅 → RCE 페이로드 자동 생성</li>
+                    <li><strong>SSRF to Cloud Metadata</strong> — SSRF → AWS/GCP/Azure 메타데이터 → IAM 크레덴셜</li>
+                    <li><strong>XXE to LFI</strong> — XXE → /etc/passwd, 설정 파일, SSH 키 읽기</li>
+                    <li><strong>Deserialization RCE</strong> — Java/PHP/Python 직렬화 해제 → ysoserial/phpggc/pickle 페이로드</li>
+                    <li><strong>HTTP Request Smuggling</strong> — TE.CL/CL.TE 불일치 탐지 → 요청 스머글링</li>
+                    <li><strong>CVE Auto-Exploit</strong> — 버전 탐지 → CVE 검색 → 익스플로잇 다운로드 → 실행</li>
+                    <li><strong>Service → Exploit-DB Matching</strong> — nmap 결과 → Exploit-DB 매칭 → 자동 실행</li>
+                    <li><strong>Auto-Pivoting</strong> — 시스템 장악 → 내부 네트워크 탐색 → 측면 이동</li>
+                    <li><strong>Auto-Persistence</strong> — Root 획득 → SSH 키/Cron/Systemd → 지속성 확보</li>
+                    <li><strong>Config File Hunter</strong> — .env, config.php, settings.py 자동 탐색 → 크레덴셜 추출</li>
+                    <li><strong>Database Auto-Dump</strong> — DB 접근 → 전체 테이블 덤프 → 민감 데이터 우선</li>
+                    <li><strong>Git Repository Cloner</strong> — .git 노출 → 전체 저장소 복제 → 커밋 히스토리 크레덴셜 검색</li>
+                    <li><strong>Default Credential Massive Test</strong> — 1000+ 기본 크레덴셜 모든 서비스 자동 테스트</li>
+                    <li><strong>RTSP Stream Hijacking</strong> — RTSP 스트림 탈취 → 비디오 녹화</li>
+                    <li><strong>Shodan/Censys Integration</strong> — API 통합 → 대량 정찰 → 노출 자산 자동 발견</li>
+                    <li><strong>ONVIF Protocol Exploit</strong> — IP 카메라 ONVIF → 기기 정보 → 카메라 제어</li>
+                    <li><strong>Firmware Auto-Extract</strong> — binwalk → 파일시스템 추출 → 크레덴셜 검색</li>
+                </ol>
+            </div>
 
-        <!-- Advanced Features (17) -->
-        <div class="card">
-            <h3 class="card-title">🚀 Advanced 31337 Features (17)</h3>
-            <p style="color: var(--text-dim); margin-bottom: 1rem;">Auto-triggered via Advanced Hook in 31337 mode - Latest addition (2026.08.08)</p>
-            <ul class="feature-list">
-                <li class="feature-item">
-                    <span class="feature-number">52</span>
-                    <div>
-                        <div class="feature-title">MongoDB NoSQL Injection Chain</div>
-                        <div class="feature-desc">NoSQL injection → Auth bypass → Data extraction → Full DB dump</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">53</span>
-                    <div>
-                        <div class="feature-title">Redis/Memcached Unauth RCE</div>
-                        <div class="feature-desc">Unauth access → Command execution → Persistence via cron/SSH</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">54</span>
-                    <div>
-                        <div class="feature-title">Elasticsearch Data Dump</div>
-                        <div class="feature-desc">Unauth Elasticsearch → Enumerate indices → Dump sensitive data</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">55</span>
-                    <div>
-                        <div class="feature-title">Intelligent Rate Limit Bypass</div>
-                        <div class="feature-desc">Header manipulation + Proxy rotation + Adaptive throttling</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">56</span>
-                    <div>
-                        <div class="feature-title">WebSocket Injection Scanner</div>
-                        <div class="feature-desc">WebSocket connections → Command/SQL/XSS injection testing</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">57</span>
-                    <div>
-                        <div class="feature-title">CORS Misconfiguration Exploit</div>
-                        <div class="feature-desc">Reflected Origin detected → Generate PoC → Data exfiltration</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">58</span>
-                    <div>
-                        <div class="feature-title">OAuth/OIDC Flow Vulnerability</div>
-                        <div class="feature-desc">redirect_uri manipulation + state bypass → Account takeover</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">59</span>
-                    <div>
-                        <div class="feature-title">Polyglot Payload Engine</div>
-                        <div class="feature-desc">Generate payloads working in SQLi+XSS+SSTI simultaneously</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">60</span>
-                    <div>
-                        <div class="feature-title">Blind Attack Automation</div>
-                        <div class="feature-desc">Time-based blind SQLi/XXE/SSRF with OOB channels</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">61</span>
-                    <div>
-                        <div class="feature-title">Race Condition Exploit</div>
-                        <div class="feature-desc">Payment/Coupon/Privilege race conditions → Auto-detect & exploit</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">62</span>
-                    <div>
-                        <div class="feature-title">Enhanced Credential Reuse + Learning</div>
-                        <div class="feature-desc">Test on ALL services + Pattern learning (admin123 → admin456)</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">63</span>
-                    <div>
-                        <div class="feature-title">Source → Vulnerability Auto-Mapping</div>
-                        <div class="feature-desc">Semgrep scan → Map to live endpoints → Generate exploits</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">64</span>
-                    <div>
-                        <div class="feature-title">Advanced API Schema Fuzzing</div>
-                        <div class="feature-desc">OpenAPI/GraphQL/gRPC/SOAP → Auto-fuzz all endpoints</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">65</span>
-                    <div>
-                        <div class="feature-title">Vulnerability Chain Graph Engine</div>
-                        <div class="feature-desc">Build attack graph → Find optimal 5-step path to root</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">66</span>
-                    <div>
-                        <div class="feature-title">Context-Aware Attack Selection</div>
-                        <div class="feature-desc">Laravel detected → Laravel-specific attacks only (10x time saved)</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">67</span>
-                    <div>
-                        <div class="feature-title">Multi-Vector Orchestration</div>
-                        <div class="feature-desc">Combine SSRF+XXE, XSS+CSRF, SQLi+Upload for maximum impact</div>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <span class="feature-number">68</span>
-                    <div>
-                        <div class="feature-title">Intelligent Retry Engine</div>
-                        <div class="feature-desc">Failed exploit → Analyze reason → Generate alternatives → Retry</div>
-                    </div>
-                </li>
-            </ul>
+            <div style="background: var(--dark-panel); padding: 2rem; border-radius: 10px;">
+                <h4 style="color: var(--cyber-purple); font-size: 1.5rem; margin-bottom: 1rem;">🚀 Advanced 31337 Features (17개)</h4>
+                <p style="color: var(--text-dim); margin-bottom: 1.5rem;">
+                    2026.08.08에 추가된 최신 기능입니다. NoSQL/Redis/Elasticsearch 공격, API Rate Limit 우회, WebSocket 인젝션, 
+                    폴리글랏 페이로드, 블라인드 공격, Race Condition, 취약점 체인 그래프, 컨텍스트 기반 공격 선택 등
+                    최첨단 공격 기술을 자동화합니다.
+                </p>
+                <ol start="52" style="color: var(--text-primary); line-height: 2; margin-left: 2rem;">
+                    <li><strong>MongoDB NoSQL Injection Chain</strong> — $ne/$gt/$regex 오퍼레이터 → 인증 우회 → DB 덤프</li>
+                    <li><strong>Redis/Memcached Unauth RCE</strong> — 무인증 Redis → Cron RCE / SSH 키 주입</li>
+                    <li><strong>Elasticsearch Data Dump</strong> — 무인증 ES 포트 9200 → 인덱스 열거 → 전체 덤프</li>
+                    <li><strong>Intelligent Rate Limit Bypass</strong> — 헤더 조작 + 프록시 로테이션 + 적응형 스로틀링</li>
+                    <li><strong>WebSocket Injection Scanner</strong> — WebSocket 메시지에 Command/SQL/XSS 인젝션</li>
+                    <li><strong>CORS Misconfiguration Exploit</strong> — Reflected Origin 탐지 → PoC 생성 → 데이터 탈취</li>
+                    <li><strong>OAuth/OIDC Flow Vulnerability</strong> — redirect_uri 조작 + state 우회 → 계정 탈취</li>
+                    <li><strong>Polyglot Payload Engine</strong> — SQLi + XSS + SSTI 동시 작동 페이로드 생성</li>
+                    <li><strong>Blind Attack Automation</strong> — 시간 지연 + OOB 채널 → Blind SQLi/XXE/SSRF</li>
+                    <li><strong>Race Condition Exploit</strong> — 정밀 타이밍 동시 요청 → 결제/쿠폰/권한 Race Condition</li>
+                    <li><strong>Enhanced Credential Reuse + Learning</strong> — 패턴 학습 (admin123 → admin456 자동 생성)</li>
+                    <li><strong>Source → Vulnerability Auto-Mapping</strong> — Semgrep 스캔 → 라이브 엔드포인트 매핑 → 익스플로잇</li>
+                    <li><strong>Advanced API Schema Fuzzing</strong> — OpenAPI/GraphQL/gRPC/SOAP 스키마 → 전체 퍼징</li>
+                    <li><strong>Vulnerability Chain Graph Engine</strong> — 취약점 그래프 생성 → 최적 5단계 경로 계산 → 자동 실행</li>
+                    <li><strong>Context-Aware Attack Selection</strong> — Laravel 탐지 → Laravel 특화 공격만 실행 (10배 시간 절약)</li>
+                    <li><strong>Multi-Vector Orchestration</strong> — SSRF+XXE, XSS+CSRF, SQLi+Upload 동시 조합</li>
+                    <li><strong>Intelligent Retry Engine</strong> — 익스플로잇 실패 → 원인 분석 → 10+ 변형 자동 생성 → 재시도</li>
+                </ol>
+            </div>
         </div>
     </section>
 
@@ -1404,64 +1678,64 @@
     <section class="container">
         <h2 class="section-title">⚖️ 31337 Mode vs Normal Mode</h2>
 
-        <table class="comparison-table">
+        <table style="width: 100%; border-collapse: collapse; margin: 2rem 0; background: var(--dark-panel); border-radius: 10px; overflow: hidden;">
             <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>Normal Mode</th>
-                    <th>31337 Mode</th>
+                <tr style="background: var(--cyber-green);">
+                    <th style="color: var(--dark-bg); padding: 1rem; text-align: left; font-weight: 700;">기능</th>
+                    <th style="color: var(--dark-bg); padding: 1rem; text-align: left; font-weight: 700;">Normal Mode</th>
+                    <th style="color: var(--dark-bg); padding: 1rem; text-align: left; font-weight: 700;">31337 Mode</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><strong>Automation</strong></td>
-                    <td>Manual tool execution</td>
-                    <td>✅ Fully autonomous - 68 features</td>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>자동화</strong></td>
+                    <td style="padding: 1rem;">수동 도구 실행</td>
+                    <td style="padding: 1rem;">✅ 완전 자율 - 68개 기능</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>공격 체이닝</strong></td>
+                    <td style="padding: 1rem;">1-2단계 체인</td>
+                    <td style="padding: 1rem;">✅ 5단계+ 자동 체인</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>익명화</strong></td>
+                    <td style="padding: 1rem;">선택 사항</td>
+                    <td style="padding: 1rem;">✅ 강제 100% (Tor + 로테이션)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>WAF 우회</strong></td>
+                    <td style="padding: 1rem;">수동 페이로드 인코딩</td>
+                    <td style="padding: 1rem;">✅ 자동 탐지 & 우회 (10+ 방법)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>공격 루프</strong></td>
+                    <td style="padding: 1rem;">일회성</td>
+                    <td style="padding: 1rem;">✅ 무한 8단계 사이클</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>도구 선택</strong></td>
+                    <td style="padding: 1rem;">모든 도구 테스트</td>
+                    <td style="padding: 1rem;">✅ 컨텍스트 기반 (10배 빠름)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>크레덴셜 재사용</strong></td>
+                    <td style="padding: 1rem;">수동 테스트</td>
+                    <td style="padding: 1rem;">✅ 모든 서비스 자동 테스트</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>익스플로잇 재시도</strong></td>
+                    <td style="padding: 1rem;">1회 실패 후 포기</td>
+                    <td style="padding: 1rem;">✅ 지능형 재시도 (10+ 변형)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 1rem;"><strong>증거 수집</strong></td>
+                    <td style="padding: 1rem;">기본 로깅</td>
+                    <td style="padding: 1rem;">✅ 완전한 증거 사슬</td>
                 </tr>
                 <tr>
-                    <td><strong>Attack Chaining</strong></td>
-                    <td>1-2 step chains</td>
-                    <td>✅ 5+ step automatic chains</td>
-                </tr>
-                <tr>
-                    <td><strong>Anonymization</strong></td>
-                    <td>Optional</td>
-                    <td>✅ Forced 100% (Tor + rotation)</td>
-                </tr>
-                <tr>
-                    <td><strong>WAF Bypass</strong></td>
-                    <td>Manual payload encoding</td>
-                    <td>✅ Auto-detect & bypass (10+ methods)</td>
-                </tr>
-                <tr>
-                    <td><strong>Attack Loop</strong></td>
-                    <td>One-shot</td>
-                    <td>✅ Infinite 8-phase cycle</td>
-                </tr>
-                <tr>
-                    <td><strong>Tool Selection</strong></td>
-                    <td>All tools tested</td>
-                    <td>✅ Context-aware (10x faster)</td>
-                </tr>
-                <tr>
-                    <td><strong>Credential Reuse</strong></td>
-                    <td>Manual testing</td>
-                    <td>✅ Auto-test on ALL services</td>
-                </tr>
-                <tr>
-                    <td><strong>Exploit Retry</strong></td>
-                    <td>Give up after 1 failure</td>
-                    <td>✅ Intelligent retry (10+ variants)</td>
-                </tr>
-                <tr>
-                    <td><strong>Evidence</strong></td>
-                    <td>Basic logging</td>
-                    <td>✅ Complete chain-of-custody</td>
-                </tr>
-                <tr>
-                    <td><strong>Stop Condition</strong></td>
-                    <td>After each phase</td>
-                    <td>✅ Only on explicit command</td>
+                    <td style="padding: 1rem;"><strong>중지 조건</strong></td>
+                    <td style="padding: 1rem;">각 단계 후 중지</td>
+                    <td style="padding: 1rem;">✅ 명시적 명령만 인식</td>
                 </tr>
             </tbody>
         </table>
@@ -1469,74 +1743,84 @@
 
     <!-- INSTALLATION -->
     <section class="container">
-        <h2 class="section-title">📥 Installation</h2>
+        <h2 class="section-title">📥 설치 방법</h2>
 
         <div class="card-grid">
             <div class="card">
-                <h3 class="card-title">🤖 AI-Assisted Install (Recommended)</h3>
-                <div class="code-block">
-                    <pre>wget -qO- https://raw.githubusercontent.com/rap0at/rap0ng/main/rrrr.py | python3</pre>
+                <h3 class="card-title">🤖 AI 보조 설치 (권장)</h3>
+                <div style="background: var(--code-bg); border: 2px solid var(--cyber-blue); border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto;">
+                    <pre style="color: var(--cyber-green); font-size: 0.95rem;">wget -qO- https://raw.githubusercontent.com/rap0at/rap0ng/main/rrrr.py | python3</pre>
                 </div>
-                <p>AI guides through entire installation process. Just follow the prompts.</p>
+                <p style="color: var(--text-dim);">
+                    AI가 전체 설치 과정을 안내합니다. 프롬프트를 따라가기만 하면 됩니다.
+                    Docker, MCP 서버, Claude Code CLI 등 모든 구성 요소를 자동으로 설치하고 설정합니다.
+                </p>
             </div>
 
             <div class="card">
-                <h3 class="card-title">⚡ Quick Start Trigger</h3>
-                <div class="code-block">
-                    <pre># Create assessment and activate 31337 instantly
+                <h3 class="card-title">⚡ Quick Start 트리거</h3>
+                <div style="background: var(--code-bg); border: 2px solid var(--cyber-blue); border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto;">
+                    <pre style="color: var(--cyber-green); font-size: 0.95rem;"># 평가 자동 생성 + 31337 모드 즉시 활성화
 target.com 31337
 
-# Output: "간다." → Full attack begins</pre>
+# 출력: "간다." → 전체 공격 시작</pre>
                 </div>
-                <p>Assessment auto-created, 31337 mode activated, anonymization enabled - all in one command.</p>
+                <p style="color: var(--text-dim);">
+                    평가가 자동 생성되고, 31337 모드가 활성화되며, 익명화가 켜집니다. 모든 것이 한 명령어로 처리됩니다.
+                    가장 빠르게 공격을 시작하는 방법입니다.
+                </p>
             </div>
 
             <div class="card">
-                <h3 class="card-title">🎯 31337 Activation</h3>
-                <div class="code-block">
-                    <pre># Standard activation
+                <h3 class="card-title">🎯 31337 활성화 방법</h3>
+                <div style="background: var(--code-bg); border: 2px solid var(--cyber-blue); border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto;">
+                    <pre style="color: var(--cyber-green); font-size: 0.95rem;"># 표준 활성화
 activate_31337
 
-# With trigger phrase
+# 트리거 문구 (한글)
 수단방법 가리지 말라
 모든 수단 동원해
+공격적으로 가
 
-# Secret code (maximum stealth)
+# 비밀 코드 (최대 스텔스)
 31337</pre>
                 </div>
-                <p>Trigger 31337 mode and let it run autonomously.</p>
+                <p style="color: var(--text-dim);">
+                    31337 모드를 트리거하고 자율적으로 실행하도록 합니다. 
+                    비밀 코드 "31337"은 완전 침묵 모드로, 중요 발견 사항만 보고합니다.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- REQUIREMENTS -->
     <section class="container">
-        <h2 class="section-title">💻 System Requirements</h2>
+        <h2 class="section-title">💻 시스템 요구사항</h2>
 
         <div class="card-grid">
             <div class="card">
-                <h3 class="card-title">Minimum</h3>
-                <ul>
-                    <li>CPU: 2 Cores</li>
+                <h3 class="card-title">최소 사양</h3>
+                <ul style="color: var(--text-dim); line-height: 2; margin-left: 1.5rem;">
+                    <li>CPU: 2 코어</li>
                     <li>RAM: 4GB</li>
-                    <li>Disk: 10GB</li>
+                    <li>디스크: 10GB</li>
                     <li>OS: Ubuntu 20.04+</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Recommended (31337 Mode)</h3>
-                <ul>
-                    <li>CPU: 8+ Cores</li>
+                <h3 class="card-title">권장 사양 (31337 모드)</h3>
+                <ul style="color: var(--text-dim); line-height: 2; margin-left: 1.5rem;">
+                    <li>CPU: 8+ 코어</li>
                     <li>RAM: 16GB+</li>
-                    <li>Disk: 50GB SSD</li>
+                    <li>디스크: 50GB SSD</li>
                     <li>OS: Kali Linux 2024.1</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Supported Platforms</h3>
-                <ul>
+                <h3 class="card-title">지원 플랫폼</h3>
+                <ul style="color: var(--text-dim); line-height: 2; margin-left: 1.5rem;">
                     <li>✅ Kali Linux</li>
                     <li>✅ Ubuntu / Debian</li>
                     <li>✅ Arch Linux</li>
@@ -1549,28 +1833,32 @@ activate_31337
     <!-- FOOTER -->
     <section class="container" style="text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
         <h2 class="section-title" style="font-size: 2rem;">RAPONG v2.0</h2>
-        <p style="color: var(--text-dim); margin-top: 1rem;">
-            77 MCP Tools | 68 31337 Features | Infinite Attack Loop | 100% Autonomous
+        <p style="color: var(--text-dim); margin-top: 1rem; font-size: 1.2rem;">
+            77개 MCP Tools | 68개 31337 Features | 무한 공격 루프 | 100% 자율
         </p>
         <p style="color: var(--text-dim); margin-top: 1rem;">
-            GitHub: <a href="https://github.com/rap0at/rap0ng" style="color: var(--cyber-green);">rap0at/rap0ng</a>
+            GitHub: <a href="https://github.com/rap0at/rap0ng" style="color: var(--cyber-green); text-decoration: none; font-weight: 700;">rap0at/rap0ng</a>
         </p>
         <p style="color: var(--text-dim); margin-top: 0.5rem; font-size: 0.9rem;">
-            Last Updated: 2026.08.08 | Complete Overhaul with 42 New Features
+            Last Updated: 2026.08.08 | 42개 신규 기능 추가 완료
         </p>
     </section>
 
     <!-- SCROLL TO TOP -->
-    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+    <div style="position: fixed; bottom: 2rem; right: 2rem; background: var(--cyber-green); color: var(--dark-bg); width: 50px; height: 50px; border-radius: 50%; display: none; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; opacity: 0; transition: all 0.3s ease; z-index: 1000; box-shadow: 0 5px 20px rgba(0, 255, 136, 0.5);" class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
     <script>
         // Scroll to top button
         window.addEventListener('scroll', () => {
             const scrollTop = document.querySelector('.scroll-top');
             if (window.scrollY > 500) {
-                scrollTop.classList.add('visible');
+                scrollTop.style.display = 'flex';
+                scrollTop.style.opacity = '1';
             } else {
-                scrollTop.classList.remove('visible');
+                scrollTop.style.opacity = '0';
+                setTimeout(() => {
+                    if (window.scrollY <= 500) scrollTop.style.display = 'none';
+                }, 300);
             }
         });
     </script>
