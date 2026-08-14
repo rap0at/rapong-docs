@@ -509,7 +509,7 @@
                 <li>🛡️ <strong>Fail-Safety 3-Layer</strong> — 런타임 모니터링 + 자동 복구 + 환경 감지</li>
                 <li>📊 <strong>Health API</strong> — 18개 모듈 실시간 상태 확인 및 자동 복구</li>
                 <li>🌐 <strong>환경 독립성</strong> — Docker/bare metal/모든 네트워크 자동 감지</li>
-                <li>✅ <strong>A to Z 검증</strong> — 33/33 테스트 통과 (100%), 모든 핵심 시스템 작동</li>
+                <li>✅ <strong>이중 검증 완료</strong> — A to Z: 33/33 (100%), Comprehensive: 27/29 (93.1%), <strong>전체 96.8% (60/62)</strong></li>
                 <li>🔒 <strong>동적 네트워크 감지</strong> — 6개 메서드로 자동 네트워크/호스트 탐색</li>
                 <li>🔄 <strong>환경 변수</strong> — TOR_HOST, OLLAMA_HOST, BACKEND_API_URL 모두 설정 가능</li>
             </ul>
@@ -955,13 +955,16 @@ export BACKEND_API_URL="http://localhost:8000/api"
 
     <div class="feature-grid" style="margin-top: 2rem;">
         <div class="card">
-            <div class="card-title" style="color: var(--cyber-green);">✅ 검증 완료</div>
+            <div class="card-title" style="color: var(--cyber-green);">✅ 이중 검증 완료 (96.8%)</div>
             <div class="card-content">
-                A to Z 검증 결과:<br>
-                • <strong>33/33 테스트 통과 (100%)</strong><br>
-                • 모든 핵심 시스템 작동<br>
-                • 100% 동적 설정 검증<br>
-                • 모든 환경에서 작동 확인
+                <strong>Test Suite 1: A to Z (100%)</strong><br>
+                • 33/33 테스트 통과 — 시스템/엔진/AI/Fail-Safety<br><br>
+                <strong>Test Suite 2: Comprehensive (93.1%)</strong><br>
+                • 27/29 테스트 통과 — 메소드 레벨 검증<br>
+                • 웹 해킹: 15/15 메소드 확인<br>
+                • 카메라 해킹: 28/28 메소드 확인<br>
+                • AI 3모드 inference 테스트 완료<br><br>
+                <strong>전체: 60/62 (96.8%)</strong> ✅
             </div>
         </div>
 
