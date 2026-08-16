@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAPONG v4.3 - AI 기반 자율 모의해킹 플랫폼 (757개 공격 기능, Zero Hardcoding)</title>
+    <title>RAPONG v4.4 - AI 기반 자율 모의해킹 플랫폼 (757개 공격 기능 + HexStrike AI)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -450,7 +450,7 @@
 <!-- ========== HERO SECTION ========== -->
 <section class="hero">
     <div class="hero-content fade-in-up">
-        <div class="version-badge">v4.3 - 757개 공격 기능 + Zero Hardcoding + Fail-Safety</div>
+        <div class="version-badge">v4.4 - 757개 공격 기능 + HexStrike AI (150+ 도구) + Windows 지원</div>
         <h1 class="title-mega">RAPONG</h1>
         <p class="subtitle">AI 기반 자율 모의해킹 플랫폼</p>
         <p class="subtitle" style="font-size: 1.5rem; color: var(--cyber-green);">
@@ -492,7 +492,7 @@
     <p class="section-subtitle">완전 자율 Kill Chain 실행이 가능한 AI 모의해킹 프레임워크</p>
 
     <div class="section-intro">
-        <p><strong>RAPONG v4.3</strong>는 757개의 공격 기능을 탑재한 세계 최대 규모의 AI 자율 모의해킹 플랫폼입니다.</p>
+        <p><strong>RAPONG v4.4</strong>는 757개의 공격 기능을 탑재한 세계 최대 규모의 AI 자율 모의해킹 플랫폼입니다.</p>
         <p style="margin-top: 1rem;">타겟과 범위만 정의하면, AI가 모든 것을 자동으로:</p>
         <ul style="margin-left: 2rem; margin-top: 1rem;">
             <li>✅ <strong>발견</strong>: 서브도메인, 포트, 엔드포인트, 숨겨진 API</li>
@@ -502,7 +502,21 @@
             <li>✅ <strong>문서화</strong>: CVSS 4.0 점수, 재현 가능한 증거, 프로페셔널 리포트</li>
         </ul>
 
-        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--cyber-green); border-radius: 10px;">
+        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(189, 0, 255, 0.15); border-left: 4px solid var(--cyber-purple); border-radius: 10px;">
+            <h4 style="color: var(--cyber-purple); margin-bottom: 1rem; font-size: 1.3rem;">🆕 v4.4 업데이트 (2026-08-17)</h4>
+            <ul style="margin-left: 2rem; line-height: 2;">
+                <li>🤖 <strong>HexStrike AI 통합 (rapong_mod_3)</strong> — 150+ 보안 도구 + 12 AI 에이전트 자동 실행</li>
+                <li>⚡ <strong>12 AI Agents</strong> — Bug Bounty Hunter, Web Fuzzer, Vuln Scanner, Exploit Generator, CTF Solver, CVE Intelligence 등</li>
+                <li>🛠️ <strong>150+ 보안 도구</strong> — nmap, nuclei, sqlmap, ffuf, burpsuite, subfinder, gobuster, nikto 등 자동 실행</li>
+                <li>🪟 <strong>Windows 지원</strong> — WSL2 + Ubuntu 자동 설치, 단일 EXE 인스톨러 제공</li>
+                <li>📦 <strong>자동 의존성 설치</strong> — Clean/Skip 모드 모두에서 모든 모듈 패키지 자동 설치</li>
+                <li>🚀 <strong>ff.py 강화</strong> — rp/rapong 명령어 자동 등록, Cold-run 자동 감지</li>
+                <li>🎯 <strong>51개 모듈</strong> — 기존 48개 + rapong_mod_1/2/3 추가 (Privesc, Source Analysis, HexStrike)</li>
+                <li>🔄 <strong>31337 자동 실행</strong> — mod_1(5분), mod_2(10분), mod_3(5분) 백그라운드 자동 실행</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(0, 255, 136, 0.1); border-left: 4px solid var(--cyber-green); border-radius: 10px;">
             <h4 style="color: var(--cyber-green); margin-bottom: 1rem; font-size: 1.3rem;">🎯 v4.3 업데이트 (2026-08-16)</h4>
             <ul style="margin-left: 2rem; line-height: 2;">
                 <li>🚀 <strong>TRUE 100% AI Integration</strong> — 757개 전체 공격 기능에 AI 연동 완료</li>
@@ -550,9 +564,9 @@
         </div>
 
         <div class="card">
-            <div class="card-title">🎯 48 전문 모듈</div>
+            <div class="card-title">🎯 51 전문 모듈</div>
             <div class="card-content">
-                757개 공격 기능, 48개 모듈:<br>
+                757개 공격 기능, 51개 모듈:<br>
                 • Web & API (130+ features)<br>
                 • Cloud & Infrastructure (80+ features)<br>
                 • Mobile & IoT (70+ features)<br>
@@ -2182,7 +2196,7 @@ python build_pyinstaller.py
 
 <!-- ========== 48 MODULES COMPLETE LIST ========== -->
 <section class="container">
-    <h2 class="section-title">📦 48개 Attack Modules - 완전 분석</h2>
+    <h2 class="section-title">📦 51개 Attack Modules - 완전 분석</h2>
     <p class="section-subtitle">31337 트리거 시 활성화되는 전체 공격 모듈 목록 (757개 공격 기능)</p>
 
     <div class="section-intro">
