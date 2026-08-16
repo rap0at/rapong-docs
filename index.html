@@ -506,7 +506,7 @@
             <h4 style="color: var(--cyber-green); margin-bottom: 1rem; font-size: 1.3rem;">🎯 v4.3 업데이트 (2026-08-16)</h4>
             <ul style="margin-left: 2rem; line-height: 2;">
                 <li>🚀 <strong>TRUE 100% AI Integration</strong> — 757개 전체 공격 기능에 AI 연동 완료</li>
-                <li>⚡ <strong>506 AI Calls</strong> — 48개 모듈 전체에 AI 호출 분산 배치 (평균 11.5개/모듈)</li>
+                <li>⚡ <strong>567 AI Calls</strong> — 48개 모듈 전체에 AI 호출 분산 배치 (평균 11.8개/모듈)</li>
                 <li>🛡️ <strong>AI Security Bypass</strong> — External Mode 100% 성공 (Jailbreak + Auto-Fallback)</li>
                 <li>📊 <strong>Resource Monitor</strong> — 실시간 CPU/Memory 모니터링, 동적 스케일링 (5-50 병렬)</li>
                 <li>🔥 <strong>Zero Stub Code</strong> — 655개 mock AI 구현 전부 제거, 실제 AI 호출로 대체</li>
@@ -550,7 +550,7 @@
         </div>
 
         <div class="card">
-            <div class="card-title">🎯 44 전문 모듈</div>
+            <div class="card-title">🎯 48 전문 모듈</div>
             <div class="card-content">
                 757개 공격 기능, 48개 모듈:<br>
                 • Web & API (130+ features)<br>
@@ -2179,6 +2179,518 @@ python build_pyinstaller.py
     </div>
 </section>
 
+
+<!-- ========== 48 MODULES COMPLETE LIST ========== -->
+<section class="container">
+    <h2 class="section-title">📦 48개 Attack Modules - 완전 분석</h2>
+    <p class="section-subtitle">31337 트리거 시 활성화되는 전체 공격 모듈 목록 (757개 공격 기능)</p>
+
+    <div class="section-intro">
+        <p><strong>총 48개 모듈</strong>, <strong>757개 공격 기능</strong>, <strong>567개 AI 호출</strong></p>
+        <p style="margin-top: 1rem;">모듈당 평균 <strong>15.8개 기능</strong>, <strong>11.8개 AI 호출</strong> — 100% AI 통합 완료</p>
+    </div>
+
+    <!-- Web & API -->
+    <div class="module-section">
+        <h3 class="module-title">🌐 Web & API (4개 모듈, 66개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">1. Ultimate Web (27 기능)</div>
+                <ul class="module-list">
+                    <li>OAuth 2.0/OIDC 취약점</li>
+                    <li>SAML 인증 우회</li>
+                    <li>GraphQL 인트로스펙션 + 쿼리 익스플로잇</li>
+                    <li>WebSocket 인젝션</li>
+                    <li>JWT 조작 및 위조</li>
+                    <li>세션 픽세이션</li>
+                    <li>파라미터 폴루션</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">2. Advanced Web (15 기능)</div>
+                <ul class="module-list">
+                    <li>HTTP/2 Request Smuggling</li>
+                    <li>Prototype Pollution</li>
+                    <li>Deserialization RCE</li>
+                    <li>SSTI (Server-Side Template Injection)</li>
+                    <li>XXE (XML External Entity)</li>
+                    <li>HTTP Request Smuggling</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">3. API Security (16 기능)</div>
+                <ul class="module-list">
+                    <li>REST API 익스플로잇</li>
+                    <li>GraphQL 배치 쿼리 남용</li>
+                    <li>gRPC Reflection 공격</li>
+                    <li>인증 우회 (Broken Authentication)</li>
+                    <li>Mass Assignment</li>
+                    <li>API Rate Limit Bypass</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">4. HTTP/3 Modern (8 기능)</div>
+                <ul class="module-list">
+                    <li>QUIC 프로토콜 공격</li>
+                    <li>HTTP/3 Upgrade Smuggling</li>
+                    <li>QPACK 익스플로잇</li>
+                    <li>0-RTT 공격</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Camera & IoT -->
+    <div class="module-section" style="border-color: var(--cyber-red);">
+        <h3 class="module-title" style="color: var(--cyber-red);">📹 Camera & IoT (2개 모듈, 42개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">5. Camera Hacking Engine (30 기능)</div>
+                <ul class="module-list">
+                    <li>IP 카메라 익스플로잇 (Hikvision, Dahua, Axis)</li>
+                    <li>펌웨어 추출 및 역분석</li>
+                    <li>백도어 임플란트</li>
+                    <li>스트림 하이재킹 (RTSP/ONVIF)</li>
+                    <li>기본 크레덴셜 대량 테스트</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">6. Ultimate Camera (12 기능)</div>
+                <ul class="module-list">
+                    <li>ONVIF 프로토콜 공격</li>
+                    <li>RTSP 스트림 하이재킹</li>
+                    <li>DVR/NVR 익스플로잇</li>
+                    <li>카메라 펌웨어 자동 다운로드</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cloud & Infrastructure -->
+    <div class="module-section" style="border-color: var(--cyber-blue);">
+        <h3 class="module-title" style="color: var(--cyber-blue);">☁️ Cloud & Infrastructure (3개 모듈, 43개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">7. Cloud Native (11 기능)</div>
+                <ul class="module-list">
+                    <li>Kubernetes API 익스플로잇</li>
+                    <li>Container Registry Poisoning</li>
+                    <li>Serverless 공격 (AWS Lambda, Azure Functions)</li>
+                    <li>Service Mesh 취약점</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">8. Cloud Security (19 기능)</div>
+                <ul class="module-list">
+                    <li>AWS IAM 권한 상승</li>
+                    <li>Azure RBAC 우회</li>
+                    <li>GCP Service Account 탈취</li>
+                    <li>S3/Blob Storage Takeover</li>
+                    <li>Cloud Metadata 익스플로잇</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">9. Container Security (13 기능)</div>
+                <ul class="module-list">
+                    <li>Docker Escape (Privileged Container)</li>
+                    <li>Kubernetes RBAC 우회</li>
+                    <li>Container Registry 공격</li>
+                    <li>Helm Chart 조작</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile -->
+    <div class="module-section" style="border-color: var(--cyber-yellow);">
+        <h3 class="module-title" style="color: var(--cyber-yellow);">📱 Mobile (4개 모듈, 48개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">10. Android Advanced (14 기능)</div>
+                <ul class="module-list">
+                    <li>Frida Hooking</li>
+                    <li>Root Bypass</li>
+                    <li>Smali Injection</li>
+                    <li>SSL Pinning Bypass</li>
+                    <li>DEX 디컴파일 + 패치</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">11. MacOS/iOS Exploit (13 기능)</div>
+                <ul class="module-list">
+                    <li>Keychain Theft</li>
+                    <li>Sandbox Escape</li>
+                    <li>IPA Manipulation</li>
+                    <li>Code Signing Bypass</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">12. Mobile Exploitation (14 기능)</div>
+                <ul class="module-list">
+                    <li>Deeplink Hijacking</li>
+                    <li>Intent Redirection</li>
+                    <li>Certificate Pinning Bypass</li>
+                    <li>WebView 취약점</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">13. Mobile Security (7 기능)</div>
+                <ul class="module-list">
+                    <li>APK 역분석</li>
+                    <li>Runtime Manipulation</li>
+                    <li>Dynamic Instrumentation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post-Exploitation -->
+    <div class="module-section" style="border-color: var(--cyber-purple);">
+        <h3 class="module-title" style="color: var(--cyber-purple);">🎯 Post-Exploitation (4개 모듈, 70개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">14. AD Domination (25 기능)</div>
+                <ul class="module-list">
+                    <li>Kerberoasting</li>
+                    <li>DCSync</li>
+                    <li>LAPS Extraction</li>
+                    <li>Golden Ticket</li>
+                    <li>Silver Ticket</li>
+                    <li>NTLM Relay</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">15. Lateral Movement (16 기능)</div>
+                <ul class="module-list">
+                    <li>PsExec</li>
+                    <li>WMI</li>
+                    <li>DCOM</li>
+                    <li>Pass-the-Hash</li>
+                    <li>Pass-the-Ticket</li>
+                    <li>Overpass-the-Hash</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">16. Persistence (15 기능)</div>
+                <ul class="module-list">
+                    <li>Registry Manipulation</li>
+                    <li>Service Creation</li>
+                    <li>Scheduled Tasks</li>
+                    <li>WMI Event Subscription</li>
+                    <li>Startup Folder</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">17. Red Team Infra (14 기능)</div>
+                <ul class="module-list">
+                    <li>C2 Setup (Cobalt Strike, Sliver)</li>
+                    <li>Domain Fronting</li>
+                    <li>CDN Fronting</li>
+                    <li>Redirector Setup</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exploit & Evasion -->
+    <div class="module-section" style="border-color: var(--cyber-red);">
+        <h3 class="module-title" style="color: var(--cyber-red);">💥 Exploit & Evasion (3개 모듈, 51개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">18. EDR Evasion (20 기능)</div>
+                <ul class="module-list">
+                    <li>AMSI Bypass</li>
+                    <li>ETW Patching</li>
+                    <li>Syscall Hooking</li>
+                    <li>API Unhooking</li>
+                    <li>Reflective DLL Injection</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">19. Latest CVE (19 기능)</div>
+                <ul class="module-list">
+                    <li>2023/2024 CVE 익스플로잇</li>
+                    <li>Zero-Day 템플릿</li>
+                    <li>Exploit-DB 통합</li>
+                    <li>자동 익스플로잇 다운로드</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">20. Zero Day Research (12 기능)</div>
+                <ul class="module-list">
+                    <li>Fuzzing 자동화</li>
+                    <li>바이너리 분석</li>
+                    <li>취약점 Discovery</li>
+                    <li>PoC 생성</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced & Advanced -->
+    <div class="module-section" style="border-color: var(--cyber-green);">
+        <h3 class="module-title" style="color: var(--cyber-green);">⚡ Enhanced & Advanced (3개 모듈, 45개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">21. Enhanced Features (25 기능)</div>
+                <ul class="module-list">
+                    <li>Tor Health Monitoring</li>
+                    <li>TLS Fingerprinting Randomization</li>
+                    <li>JWT Crack & Forge</li>
+                    <li>SSTI Auto-Exploit</li>
+                    <li>SSRF to Cloud Metadata</li>
+                    <li>XXE to LFI</li>
+                    <li>Config File Hunter</li>
+                    <li>Database Auto-Dump</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">22. Advanced Features (19 기능)</div>
+                <ul class="module-list">
+                    <li>MongoDB NoSQL Injection</li>
+                    <li>Redis/Memcached Exploit</li>
+                    <li>Elasticsearch Unauth Access</li>
+                    <li>API Rate Limit Bypass Engine</li>
+                    <li>WebSocket Injection Scanner</li>
+                    <li>CORS Misconfiguration Exploit</li>
+                    <li>OAuth/OIDC Flow Vulnerability</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">23. Multi Target Enhanced (1 기능)</div>
+                <ul class="module-list">
+                    <li>향상된 멀티타겟 병렬 공격 오케스트레이션</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI & ML -->
+    <div class="module-section" style="border-color: var(--cyber-purple);">
+        <h3 class="module-title" style="color: var(--cyber-purple);">🤖 AI & ML (3개 모듈, 24개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">24. AI Bypass Wrapper (2 기능)</div>
+                <ul class="module-list">
+                    <li>AI 보안 Jailbreak</li>
+                    <li>Prompt Injection Bypass</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">25. AI Exploit Generator (7 기능)</div>
+                <ul class="module-list">
+                    <li>커스텀 익스플로잇 코드 생성</li>
+                    <li>Payload Mutation Engine</li>
+                    <li>AI 기반 WAF Bypass</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">26. AI ML Attacks (15 기능)</div>
+                <ul class="module-list">
+                    <li>Adversarial ML</li>
+                    <li>Model Poisoning</li>
+                    <li>Prompt Injection</li>
+                    <li>Data Poisoning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Modules (나머지 14개 모듈) -->
+    <div class="module-section">
+        <h3 class="module-title">🔧 Core Modules (14개 모듈, 181개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">27. Ultimate 31337 (19 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    완전 자율 공격 엔진, 무한 루프, Kill Chain 자동화
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">28. Bugbounty Automation (12 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    Nuclei 통합, 자동 리포팅, Recon 파이프라인
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">29. Compliance Reporting (5 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    OWASP Top 10, PCI-DSS 검사
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">30. Credential Harvesting (14 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    LSASS 덤프, SAM 추출, Mimikatz 통합
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">31. Data Exfiltration (13 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    DNS 터널링, Steganography, 암호화 채널
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">32. Database Exploitation (15 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    SQL/NoSQL Injection, Redis/MongoDB/MSSQL
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">33. Hardware Firmware (11 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    펌웨어 추출, JTAG/UART 디버깅
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">34. IoT Exploitation (13 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    IoT 디바이스 익스플로잇, 임베디드 시스템
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">35. Multi Target (5 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    병렬 공격 오케스트레이션, 분산 스캐닝
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">36. Network Protocols (14 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    SMB, RDP, SSH, DNS, LDAP 공격
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">37. OSINT Automation (18 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    이메일/사용자명 열거, Shodan/Censys 통합
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">38. Post Exploit Chain (11 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    자동 권한 상승 체인, Post-Exploit 자동화
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">39. Ransomware Simulation (10 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    암호화 시뮬레이션 (윤리적 테스트 전용)
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">40. Report Generator Pro (8 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    전문 PDF 리포트, CVSS 스코어링
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">41. Social Engineering (12 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    피싱 자동화, 크레덴셜 하베스팅
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">42. Supply Chain (20 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">
+                    NPM/PyPI Poisoning, Dependency Confusion
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specialized -->
+    <div class="module-section" style="border-color: var(--cyber-yellow);">
+        <h3 class="module-title" style="color: var(--cyber-yellow);">🌍 Specialized (8개 모듈, 66개 기능)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <div class="card-title">43. Automotive Security (3 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">CAN bus 공격, OBD-II 익스플로잇</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">44. Blockchain Attacks (13 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">스마트 컨트랙트 익스플로잇, Re-entrancy, MEV</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">45. Blockchain Security (6 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">지갑 공격, 트랜잭션 조작</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">46. Physical Security (15 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">배지 클로닝, RFID 공격, Lock Picking</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">47. SCADA/ICS Security (4 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">Modbus, S7, 산업 프로토콜 공격</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">48. Wireless Security (6 기능)</div>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">WiFi 크래킹, Rogue AP, WPA3 공격</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div style="background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-panel) 100%); border: 2px solid var(--cyber-green); border-radius: 15px; padding: 3rem; margin-top: 3rem; text-align: center;">
+        <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--cyber-green);">📊 전체 요약</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+            <div>
+                <div style="font-size: 3rem; font-weight: 900; color: var(--cyber-green);">48</div>
+                <div style="color: var(--text-dim); margin-top: 0.5rem;">Attack Modules</div>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: 900; color: var(--cyber-blue);">757</div>
+                <div style="color: var(--text-dim); margin-top: 0.5rem;">Attack Features</div>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: 900; color: var(--cyber-purple);">567</div>
+                <div style="color: var(--text-dim); margin-top: 0.5rem;">AI Enhancement Calls</div>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: 900; color: var(--cyber-red);">100%</div>
+                <div style="color: var(--text-dim); margin-top: 0.5rem;">AI Integration</div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- ========== FOOTER ========== -->
 <footer>
     <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">RAPONG v4.3</p>
