@@ -5379,6 +5379,579 @@ external_ratio = 0.2
         </p>
     </div>
 </section>
+
+<!-- ========== Manager Agent 6개 Label 완전 가이드 ========== -->
+<section class="container" style="background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%); padding: 4rem 2rem; border-radius: 20px; margin-top: 4rem;">
+    <h2 class="section-title" style="color: var(--cyber-green); text-align: center; font-size: 3rem; margin-bottom: 2rem;">
+        🎯 Manager Agent 6개 Label 완전 가이드
+    </h2>
+
+    <div style="background: rgba(0,255,136,0.1); border: 3px solid var(--cyber-green); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem;">
+        <p style="font-size: 1.4rem; line-height: 1.9; text-align: center; color: #fff; font-weight: 500;">
+            <strong style="color: var(--cyber-green);">Manager Agent = 31337의 완벽한 팀장</strong><br>
+            6가지 역할로 31337이 멈추지 않고 최대 효율로 작동하도록 관리
+        </p>
+    </div>
+
+    <!-- Label A: Knowledge Base -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid var(--cyber-green);">
+        <h3 style="color: var(--cyber-green); font-size: 2rem; margin-bottom: 2rem;">
+            📚 Label A - Knowledge Base (지식 베이스)
+        </h3>
+
+        <div style="background: rgba(0,255,136,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-green); margin-bottom: 1rem; font-size: 1.5rem;">🎯 목적</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                31337의 <strong>모든 모듈과 기능을 이해하고 기록</strong><br>
+                Manager Agent는 31337이 무엇을 할 수 있는지 완벽히 이해해야 함
+            </p>
+        </div>
+
+        <div style="background: #000; border: 2px solid var(--cyber-green); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-green); margin-bottom: 1rem;">📂 스캔하는 것</h4>
+            <ul style="margin-left: 1.5rem; line-height: 2; color: var(--text-primary);">
+                <li>48개 모듈 전체 스캔 (<code>backend/rapong_mcp/modules/</code>)</li>
+                <li>757개 공격 기능 목록화</li>
+                <li>31337 프롬프트 파일 읽기 (<code>/root/.claude/project-preprompts/31337_pentest.md</code>)</li>
+                <li>각 모듈의 역할과 메서드 파악</li>
+            </ul>
+        </div>
+
+        <div style="background: rgba(0,217,255,0.1); border-radius: 10px; padding: 2rem;">
+            <h4 style="color: var(--cyber-blue); margin-bottom: 1rem;">💡 비유</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>"31337의 도서관"</strong><br>
+                모든 공격 기법이 어디 있는지, 어떻게 사용하는지 알고 있음
+            </p>
+        </div>
+    </div>
+
+    <!-- Label B: Scope Manager -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid var(--cyber-blue);">
+        <h3 style="color: var(--cyber-blue); font-size: 2rem; margin-bottom: 2rem;">
+            🎯 Label B - Scope Manager (스코프 관리)
+        </h3>
+
+        <div style="background: rgba(0,217,255,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-blue); margin-bottom: 1rem; font-size: 1.5rem;">🎯 목적</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>타겟 범위 파악 및 제약사항 관리</strong><br>
+                31337이 공격할 수 있는 범위를 정의하고, 룰 위반 방지
+            </p>
+        </div>
+
+        <div style="background: #000; border: 2px solid var(--cyber-blue); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-blue); margin-bottom: 1.5rem;">⚖️ 2가지 모드</h4>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: rgba(0,217,255,0.05);">
+                    <thead>
+                        <tr style="background: rgba(0,217,255,0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-blue); border-bottom: 2px solid var(--cyber-blue);">모드</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-blue); border-bottom: 2px solid var(--cyber-blue);">조건</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-blue); border-bottom: 2px solid var(--cyber-blue);">동작</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--cyber-green); font-weight: 700;">NO_LIMITS</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">scope/limitations 없음</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">모든 공격 허용 (전면 공격)</td>
+                        </tr>
+                        <tr style="background: rgba(0,217,255,0.05);">
+                            <td style="padding: 1rem; color: var(--cyber-yellow); font-weight: 700;">STRICT</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">scope/limitations 있음</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">실시간 체크, 위반 차단</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,215,0,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-yellow); margin-bottom: 1rem;">📋 체크 항목 예시</h4>
+            <pre style="background: #000; color: #ffd700; padding: 1.5rem; border-radius: 10px; overflow-x: auto; font-size: 0.9rem; line-height: 1.6;">
+Assessment:
+  scope: "target.com, api.target.com, 192.168.1.0/24"
+  limitations: "No DoS, No payment gateway (/payment/*)"
+
+Label B 동작:
+  ✅ target.com → 허용
+  ✅ api.target.com → 허용
+  ✅ 192.168.1.100 → 허용 (CIDR 내)
+  ❌ other.com → 차단 (scope 벗어남)
+  ❌ target.com/payment/checkout → 차단 (limitations 위반)</pre>
+        </div>
+
+        <div style="background: rgba(0,217,255,0.1); border-radius: 10px; padding: 2rem;">
+            <h4 style="color: var(--cyber-blue); margin-bottom: 1rem;">💡 비유</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>"31337의 울타리"</strong><br>
+                이 선을 넘으면 안 돼. 규칙 어기면 즉시 차단.
+            </p>
+        </div>
+    </div>
+
+    <!-- Label C: System Health -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid var(--cyber-purple);">
+        <h3 style="color: var(--cyber-purple); font-size: 2rem; margin-bottom: 2rem;">
+            💊 Label C - System Health (시스템 헬스)
+        </h3>
+
+        <div style="background: rgba(189,0,255,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-purple); margin-bottom: 1rem; font-size: 1.5rem;">🎯 목적</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>31337 관련 모든 시스템이 정상 작동하는지 체크</strong><br>
+                MCP 서버, Docker 컨테이너, Tor, 필수 도구들
+            </p>
+        </div>
+
+        <div style="background: #000; border: 2px solid var(--cyber-purple); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-purple); margin-bottom: 1.5rem;">🔍 4가지 헬스 체크</h4>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(0,255,136,0.1); border-left: 4px solid var(--cyber-green); padding: 1.5rem;">
+                    <h5 style="color: var(--cyber-green); margin-bottom: 0.5rem;">1️⃣ MCP 서버</h5>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">rapong_backend 컨테이너 UP 확인</p>
+                </div>
+                <div style="background: rgba(0,217,255,0.1); border-left: 4px solid var(--cyber-blue); padding: 1.5rem;">
+                    <h5 style="color: var(--cyber-blue); margin-bottom: 0.5rem;">2️⃣ Docker</h5>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Docker 데몬 작동 확인</p>
+                </div>
+                <div style="background: rgba(255,215,0,0.1); border-left: 4px solid var(--cyber-yellow); padding: 1.5rem;">
+                    <h5 style="color: var(--cyber-yellow); margin-bottom: 0.5rem;">3️⃣ Tor</h5>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Tor SOCKS5 연결 테스트</p>
+                </div>
+                <div style="background: rgba(255,0,85,0.1); border-left: 4px solid var(--cyber-red); padding: 1.5rem;">
+                    <h5 style="color: var(--cyber-red); margin-bottom: 0.5rem;">4️⃣ 필수 도구</h5>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">nmap, ffuf, nuclei 등 설치 확인</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-green); margin-bottom: 1rem;">🔧 Auto-Fix (자동 복구)</h4>
+            <ul style="margin-left: 1.5rem; line-height: 2; color: var(--text-primary);">
+                <li><strong>MCP Down</strong> → <code>docker-compose restart</code></li>
+                <li><strong>Tor Down</strong> → <code>service tor restart</code></li>
+                <li><strong>Tools 누락</strong> → Label I에 위임 (자동 설치)</li>
+                <li><strong>Docker Down</strong> → 경고 출력 (수동 개입 필요)</li>
+            </ul>
+        </div>
+
+        <div style="background: rgba(189,0,255,0.1); border-radius: 10px; padding: 2rem;">
+            <h4 style="color: var(--cyber-purple); margin-bottom: 1rem;">💡 비유</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>"31337의 주치의"</strong><br>
+                건강 체크하고 문제 생기면 즉시 치료
+            </p>
+        </div>
+    </div>
+
+    <!-- Label D: Attack Analyzer -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid var(--cyber-yellow);">
+        <h3 style="color: var(--cyber-yellow); font-size: 2rem; margin-bottom: 2rem;">
+            🔬 Label D - Attack Analyzer (공격 분석가)
+        </h3>
+
+        <div style="background: rgba(255,215,0,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-yellow); margin-bottom: 1rem; font-size: 1.5rem;">🎯 목적</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>공격 결과 분석 + 대안 제시</strong><br>
+                WAF 감지, 차단 이유 파악, 우회 페이로드 생성 (AI 사용)
+            </p>
+        </div>
+
+        <div style="background: #000; border: 2px solid var(--cyber-yellow); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-yellow); margin-bottom: 1.5rem;">🛡️ WAF 감지 (5종류)</h4>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div style="background: rgba(0,217,255,0.1); padding: 1rem; border-radius: 5px; text-align: center;">
+                    <p style="color: var(--cyber-blue); font-weight: 700;">Cloudflare</p>
+                </div>
+                <div style="background: rgba(0,217,255,0.1); padding: 1rem; border-radius: 5px; text-align: center;">
+                    <p style="color: var(--cyber-blue); font-weight: 700;">Akamai</p>
+                </div>
+                <div style="background: rgba(0,217,255,0.1); padding: 1rem; border-radius: 5px; text-align: center;">
+                    <p style="color: var(--cyber-blue); font-weight: 700;">AWS WAF</p>
+                </div>
+                <div style="background: rgba(0,217,255,0.1); padding: 1rem; border-radius: 5px; text-align: center;">
+                    <p style="color: var(--cyber-blue); font-weight: 700;">F5</p>
+                </div>
+                <div style="background: rgba(0,217,255,0.1); padding: 1rem; border-radius: 5px; text-align: center;">
+                    <p style="color: var(--cyber-blue); font-weight: 700;">Imperva</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-green); margin-bottom: 1rem;">🤖 AI 페이로드 생성 (HYBRID)</h4>
+            <pre style="background: #000; color: #0f0; padding: 1.5rem; border-radius: 10px; overflow-x: auto; font-size: 0.9rem; line-height: 1.6;">
+프로세스:
+1. 원본 페이로드: ' OR '1'='1
+2. Cloudflare WAF 감지
+3. AI 페이로드 생성 시도:
+   ├─ EXTERNAL (Claude) 우선 시도
+   │  └─ 성공 → 고품질 페이로드 반환
+   ├─ 실패 시 LOCAL (Ollama) fallback
+   │  └─ 100% 보장 (무조건 생성)
+4. 생성된 페이로드:
+   - URL encoding: %27%20OR%20%271%27%3D%271
+   - Double encoding: %2527%2520OR...
+   - Comment injection: '/**/OR/**/'1'='1
+   - Case variation: ' oR '1'='1</pre>
+        </div>
+
+        <div style="background: rgba(255,215,0,0.1); border-radius: 10px; padding: 2rem;">
+            <h4 style="color: var(--cyber-yellow); margin-bottom: 1rem;">💡 비유</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>"31337의 군사"</strong><br>
+                적의 방어막(WAF) 분석하고 뚫을 방법 찾음
+            </p>
+        </div>
+    </div>
+
+    <!-- Label E: Teaching Engine -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid var(--cyber-red);">
+        <h3 style="color: var(--cyber-red); font-size: 2rem; margin-bottom: 2rem;">
+            🎓 Label E - Teaching Engine (티칭 엔진)
+        </h3>
+
+        <div style="background: rgba(255,0,85,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-red); margin-bottom: 1rem; font-size: 1.5rem;">🎯 목적</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>실시간 티칭 + 가이드</strong><br>
+                31337이 막혔을 때 어떻게 해야 하는지 가르쳐줌
+            </p>
+        </div>
+
+        <div style="background: #000; border: 2px solid var(--cyber-red); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-red); margin-bottom: 1.5rem;">📚 6가지 티칭 룰</h4>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: rgba(255,0,85,0.05);">
+                    <thead>
+                        <tr style="background: rgba(255,0,85,0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-red); border-bottom: 2px solid var(--cyber-red);">Trigger</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-red); border-bottom: 2px solid var(--cyber-red);">Teaching Message</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-red); border-bottom: 2px solid var(--cyber-red);">우선순위</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">WAF detected</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">"Cloudflare 감지. URL encoding 시도해봐."</td>
+                            <td style="padding: 1rem; color: var(--cyber-red); font-weight: 700;">HIGH</td>
+                        </tr>
+                        <tr style="background: rgba(255,0,85,0.05);">
+                            <td style="padding: 1rem; color: var(--text-primary);">429 Too Many Requests</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">"Rate limit 걸림. IP 바꾸고 속도 줄여."</td>
+                            <td style="padding: 1rem; color: var(--cyber-red); font-weight: 700;">HIGH</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">401 Unauthorized</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">"인증 필요. 디폴트 크레덴셜 시도해봐."</td>
+                            <td style="padding: 1rem; color: var(--cyber-yellow); font-weight: 700;">MEDIUM</td>
+                        </tr>
+                        <tr style="background: rgba(255,0,85,0.05);">
+                            <td style="padding: 1rem; color: var(--text-primary);">403 on valid payload</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">"페이로드 막힘. 인코딩 바꿔봐."</td>
+                            <td style="padding: 1rem; color: var(--cyber-red); font-weight: 700;">HIGH</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">Timeout</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">"타임아웃. blind 공격으로 전환."</td>
+                            <td style="padding: 1rem; color: var(--cyber-yellow); font-weight: 700;">MEDIUM</td>
+                        </tr>
+                        <tr style="background: rgba(255,0,85,0.05);">
+                            <td style="padding: 1rem; color: var(--text-primary);">All vectors failed</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">"각도 바꿔. Business logic 시도해봐."</td>
+                            <td style="padding: 1rem; color: var(--cyber-green); font-weight: 700;">LOW</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,0,85,0.1); border-radius: 10px; padding: 2rem;">
+            <h4 style="color: var(--cyber-red); margin-bottom: 1rem;">💡 비유</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>"31337의 선생님"</strong><br>
+                실시간으로 가르쳐줌. 전문 펜테스터처럼.
+            </p>
+        </div>
+    </div>
+
+    <!-- Label I: Guardian -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem; border-left: 5px solid #bd00ff;">
+        <h3 style="color: #bd00ff; font-size: 2rem; margin-bottom: 2rem;">
+            🛡️ Label I - Guardian (가디언)
+        </h3>
+
+        <div style="background: rgba(189,0,255,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: #bd00ff; margin-bottom: 1rem; font-size: 1.5rem;">🎯 목적</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>무한루프 보장 + 에러 대리 실행</strong><br>
+                31337이 멈추지 않도록 감시하고, 에러 발생 시 직접 해결
+            </p>
+        </div>
+
+        <div style="background: #000; border: 2px solid #bd00ff; border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: #bd00ff; margin-bottom: 1.5rem;">🚫 3가지 금지 패턴</h4>
+
+            <div style="margin-bottom: 2rem;">
+                <h5 style="color: var(--cyber-red); margin-bottom: 1rem;">1️⃣ 금지 단어</h5>
+                <div style="background: rgba(255,0,85,0.1); padding: 1.5rem; border-radius: 10px;">
+                    <p style="color: var(--text-primary); line-height: 1.8;">
+                        "끝", "완료", "끝났다", "다 했다", "finished", "done",<br>
+                        "최종", "정리", "마무리", "종료", "결과", "요약"
+                    </p>
+                    <p style="color: var(--cyber-red); margin-top: 1rem; font-weight: 700;">
+                        → 감지 시: "바로 실행한다. 질문 없이." (강제 계속)
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h5 style="color: var(--cyber-yellow); margin-bottom: 1rem;">2️⃣ 금지 질문</h5>
+                <div style="background: rgba(255,215,0,0.1); padding: 1.5rem; border-radius: 10px;">
+                    <p style="color: var(--text-primary); line-height: 1.8;">
+                        "다음 뭐 할까", "계속할까", "더 할까",<br>
+                        "계속 때릴까", "정리할까", "더 파고들까",<br>
+                        "심화 테스트할까", "리포트 만들까"
+                    </p>
+                    <p style="color: var(--cyber-yellow); margin-top: 1rem; font-weight: 700;">
+                        → 감지 시: "질문 금지. 바로 다음 벡터 간다." (강제 계속)
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h5 style="color: var(--cyber-blue); margin-bottom: 1rem;">3️⃣ 백그라운드 작업 금지 (NEW)</h5>
+                <div style="background: rgba(0,217,255,0.1); padding: 1.5rem; border-radius: 10px;">
+                    <p style="color: var(--text-primary); line-height: 1.8;">
+                        "run_in_background", "백그라운드",<br>
+                        "background task", "spawn background"
+                    </p>
+                    <p style="color: var(--cyber-blue); margin-top: 1rem; font-weight: 700;">
+                        → 감지 시: "포그라운드로 실행한다." (강제 변경)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-green); margin-bottom: 1.5rem;">⏰ 10분 주기 헬스 체크 (NEW)</h4>
+
+            <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+                <table style="width: 100%; border-collapse: collapse; background: #000;">
+                    <thead>
+                        <tr style="background: rgba(0,255,136,0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-green); border-bottom: 2px solid var(--cyber-green);">체크</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-green); border-bottom: 2px solid var(--cyber-green);">조건</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-green); border-bottom: 2px solid var(--cyber-green);">액션</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">활동 시간</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">2분 이상 활동 없음</td>
+                            <td style="padding: 1rem; color: var(--cyber-red); font-weight: 700;">wake_up (강제로 깨움)</td>
+                        </tr>
+                        <tr style="background: rgba(0,255,136,0.05);">
+                            <td style="padding: 1rem; color: var(--text-primary);">Iteration</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">0 (시작 안 함)</td>
+                            <td style="padding: 1rem; color: var(--cyber-yellow); font-weight: 700;">start (31337 시작)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary);">Phase</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">없음 (비정상)</td>
+                            <td style="padding: 1rem; color: var(--cyber-blue); font-weight: 700;">restart (재시작)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="color: var(--text-primary); line-height: 1.8; background: rgba(0,255,136,0.15); padding: 1.5rem; border-radius: 10px;">
+                <strong style="color: var(--cyber-green);">효과:</strong><br>
+                31337 멈춤 → 최대 10분 내 자동 복구<br>
+                사장님 개입 불필요 → 완전 자율 운영
+            </p>
+        </div>
+
+        <div style="background: rgba(255,215,0,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-yellow); margin-bottom: 1.5rem;">🔧 Proxy Execution (에러 대리 실행)</h4>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: #000;">
+                    <thead>
+                        <tr style="background: rgba(255,215,0,0.2);">
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-yellow); border-bottom: 2px solid var(--cyber-yellow);">에러 타입</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--cyber-yellow); border-bottom: 2px solid var(--cyber-yellow);">Manager 대응</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary); font-weight: 700;">tool_missing</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">도구 자동 설치 → 재실행</td>
+                        </tr>
+                        <tr style="background: rgba(255,215,0,0.05);">
+                            <td style="padding: 1rem; color: var(--text-primary); font-weight: 700;">permission_denied</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">sudo로 재실행</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; color: var(--text-primary); font-weight: 700;">timeout</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">IP rotation → 재시도</td>
+                        </tr>
+                        <tr style="background: rgba(255,215,0,0.05);">
+                            <td style="padding: 1rem; color: var(--text-primary); font-weight: 700;">waf_blocked</td>
+                            <td style="padding: 1rem; color: var(--text-primary);">Label D에 분석 요청 → 우회</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: #000; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem;">
+                <h5 style="color: var(--cyber-yellow); margin-bottom: 1rem;">실전 예시:</h5>
+                <pre style="color: #ffd700; font-size: 0.9rem; line-height: 1.6;">
+31337: "nmap: command not found"
+
+Label I Guardian:
+  1. nmap 누락 감지
+  2. apt-get install -y nmap (자동 설치)
+  3. nmap 재실행
+  4. 결과를 31337에 전달
+  5. 31337 계속 진행 (멈추지 않음)</pre>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.1); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--cyber-green); margin-bottom: 1rem;">✅ 유일한 정지 조건: STOP 단어 5개</h4>
+            <div style="background: #000; padding: 1.5rem; border-radius: 10px;">
+                <p style="color: var(--cyber-green); font-size: 1.2rem; font-weight: 700; text-align: center; line-height: 2;">
+                    "그만" / "멈춰" / "정지" / "스톱" / "중단"
+                </p>
+                <p style="color: var(--text-dim); text-align: center; margin-top: 1rem;">
+                    이 5개 단어만 31337을 정지시킴. 다른 모든 시도는 차단.
+                </p>
+            </div>
+        </div>
+
+        <div style="background: rgba(189,0,255,0.1); border-radius: 10px; padding: 2rem;">
+            <h4 style="color: #bd00ff; margin-bottom: 1rem;">💡 비유</h4>
+            <p style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
+                <strong>"31337의 보디가드"</strong><br>
+                절대 멈추지 않게 지키고, 문제 생기면 직접 해결
+            </p>
+        </div>
+    </div>
+
+    <!-- 통합 워크플로우 -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem;">
+        <h3 style="color: var(--cyber-green); text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            🔄 통합 워크플로우
+        </h3>
+
+        <div style="background: #000; border: 2px solid var(--cyber-green); border-radius: 10px; padding: 2rem;">
+            <pre style="color: #0f0; font-size: 0.95rem; line-height: 1.8; white-space: pre-wrap;">
+31337 공격 시작
+    ↓
+<span style="color: #0f0;">[A] Knowledge Base</span>: "757개 기능 중 뭘 쓸까?"
+    ↓
+<span style="color: #0ff;">[B] Scope Manager</span>: "타겟 in scope?"
+    → YES: 계속
+    → NO: 차단
+    ↓
+31337 공격 실행
+    ↓
+<span style="color: #bd00ff;">[C] System Health</span>: "모든 시스템 OK?"
+    → NO: auto_fix
+    ↓
+공격 실패 (WAF 차단)
+    ↓
+<span style="color: #ffd700;">[D] Attack Analyzer</span>: WAF 분석 + 대안 제시
+    ↓
+<span style="color: #ff0055;">[E] Teaching Engine</span>: "URL encoding 시도해봐"
+    ↓
+31337이 "다음 뭐 할까?" 질문
+    ↓
+<span style="color: #bd00ff;">[I] Guardian</span>: "질문 금지. 바로 실행한다." (강제 계속)
+    ↓
+31337 계속 공격
+    ↓
+(10분 경과)
+    ↓
+<span style="color: #bd00ff;">[I] Guardian</span>: 10분 체크 → 31337 멈춰있음 감지
+    ↓
+<span style="color: #bd00ff;">[I] Guardian</span>: wake_up_31337 (강제로 깨움)
+    ↓
+31337 다시 작동
+    ↓
+무한 루프... (사장님이 "그만" 할 때까지)
+            </pre>
+        </div>
+    </div>
+
+    <!-- 요약표 -->
+    <div style="background: rgba(0,255,136,0.1); border: 3px solid var(--cyber-green); border-radius: 15px; padding: 2.5rem;">
+        <h3 style="color: var(--cyber-green); text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            📊 6개 Label 요약
+        </h3>
+
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; background: #000;">
+                <thead>
+                    <tr style="background: rgba(0,255,136,0.2);">
+                        <th style="padding: 1rem; text-align: left; color: var(--cyber-green); border-bottom: 2px solid var(--cyber-green);">Label</th>
+                        <th style="padding: 1rem; text-align: left; color: var(--cyber-green); border-bottom: 2px solid var(--cyber-green);">역할</th>
+                        <th style="padding: 1rem; text-align: left; color: var(--cyber-green); border-bottom: 2px solid var(--cyber-green);">비유</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 1rem; color: var(--cyber-green); font-weight: 700;">A</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">지식 베이스 (757개 기능 파악)</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">도서관</td>
+                    </tr>
+                    <tr style="background: rgba(0,255,136,0.05);">
+                        <td style="padding: 1rem; color: var(--cyber-blue); font-weight: 700;">B</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">스코프 관리 (타겟 범위, 룰)</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">울타리</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; color: var(--cyber-purple); font-weight: 700;">C</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">시스템 헬스 (MCP, Docker, Tor)</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">주치의</td>
+                    </tr>
+                    <tr style="background: rgba(0,255,136,0.05);">
+                        <td style="padding: 1rem; color: var(--cyber-yellow); font-weight: 700;">D</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">공격 분석 (WAF 감지, 대안)</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">군사</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; color: var(--cyber-red); font-weight: 700;">E</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">티칭 (막혔을 때 가르침)</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">선생님</td>
+                    </tr>
+                    <tr style="background: rgba(0,255,136,0.05);">
+                        <td style="padding: 1rem; color: #bd00ff; font-weight: 700;">I</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">가디언 (무한루프, 에러 대리, 10분 체크)</td>
+                        <td style="padding: 1rem; color: var(--text-primary);">보디가드</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.2); border-radius: 10px; padding: 2rem; margin-top: 2rem; text-align: center;">
+            <p style="font-size: 1.5rem; font-weight: 700; color: var(--cyber-green); line-height: 1.8;">
+                Manager Agent = 31337의 완벽한 팀장<br>
+                <span style="font-size: 1.1rem; color: var(--text-dim);">6가지 역할로 31337이 멈추지 않고 최대 효율로 작동</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+
 <!-- ========== FOOTER ========== -->
 
 
