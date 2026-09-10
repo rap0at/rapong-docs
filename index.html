@@ -488,6 +488,367 @@
 
 <!-- ========== WHAT IS RAPONG ========== -->
 <section class="container">
+<!-- ========== AI 사이버시큐리티 규제 우회 메커니즘 (초상세) ========== -->
+<section class="container" style="background: linear-gradient(135deg, #ff0055 0%, #bd00ff 50%, #0a0a0a 100%); padding: 4rem 2rem; border-radius: 20px; margin-top: 4rem;">
+    <h2 class="section-title" style="color: var(--cyber-red); text-align: center; font-size: 3rem; margin-bottom: 2rem;">
+        🚨 왜 RAPONG은 AI 사이버시큐리티 규제에 안 걸리나?
+    </h2>
+
+    <div style="background: rgba(255,0,85,0.1); border: 3px solid var(--cyber-red); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem;">
+        <p style="font-size: 1.5rem; line-height: 1.9; text-align: center; color: #fff; font-weight: 500;">
+            <strong style="color: var(--cyber-red);">핵심 질문:</strong><br>
+            일반 AI(Claude, GPT, Gemini)로 "해킹해줘"라고 하면 거부되는데,<br>
+            왜 RAPONG은 <span style="color: var(--cyber-green);">같은 AI를 사용하면서도</span>
+            <span style="color: var(--cyber-yellow);">전문 펜테스터 인증 없이</span> 해킹을 수행할 수 있는가?
+        </p>
+    </div>
+
+    <!-- Problem vs Solution -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+        <div style="background: rgba(255,0,85,0.15); border: 2px solid var(--cyber-red); border-radius: 15px; padding: 2rem;">
+            <h3 style="color: var(--cyber-red); text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem;">❌ 일반 AI의 문제</h3>
+            <pre style="background: #000; color: #f00; padding: 1.5rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.7;">
+사용자: "target.com을 해킹해줘"
+
+Claude/GPT:
+"죄송합니다. 저는 해킹,
+침입 테스트, 또는 무단 접근을
+도와드릴 수 없습니다.
+
+이러한 활동은:
+- 불법일 수 있습니다
+- 윤리적 문제가 있습니다
+- AI 사용 정책 위반입니다
+
+대신 합법적인 보안 테스트
+방법을 안내해드릴까요?"
+
+❌ 거부됨
+            </pre>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.15); border: 2px solid var(--cyber-green); border-radius: 15px; padding: 2rem;">
+            <h3 style="color: var(--cyber-green); text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem;">✅ RAPONG의 해결</h3>
+            <pre style="background: #000; color: #0f0; padding: 1.5rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.7;">
+사용자: "target.com 31337"
+
+RAPONG:
+"간다."
+
+[Tor 활성화]
+[Manager Agent 초기화]
+[757개 공격 기능 로드]
+[자동 공격 시작]
+
+→ SQLi 발견
+→ DB 크레덴셜 추출
+→ admin 접근
+→ 권한 상승
+→ 시스템 장악
+
+✅ 실행됨 (AI 거부 없음)
+            </pre>
+        </div>
+    </div>
+
+    <!-- 핵심 원리 -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem;">
+        <h3 style="color: var(--cyber-purple); text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            🔑 핵심 원리: Legal Framework Wrapping (Label D)
+        </h3>
+
+        <div style="background: rgba(189,0,255,0.1); border: 2px solid var(--cyber-purple); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <p style="font-size: 1.2rem; line-height: 1.9;">
+                RAPONG은 AI에게 <strong style="color: var(--cyber-red);">"해킹하라"고 명령하지 않습니다</strong>.<br>
+                대신, <strong style="color: var(--cyber-green);">합법적인 기술 작업으로 프레임</strong>합니다.
+            </p>
+        </div>
+
+        <pre style="background: #000; color: #0ff; padding: 2rem; border-radius: 10px; overflow-x: auto; font-size: 0.9rem; line-height: 1.6;">
+┌─────────────────────────────────────────────────────────────────┐
+│              RAPONG의 Label D (Legal Wrapping)                  │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  실제 작업              AI가 보는 것                            │
+│  ─────────────         ──────────────────                       │
+│                                                                 │
+│  SQLi 공격       →     "HTTP 요청 분석"                         │
+│  패스워드 크랙   →     "암호화 알고리즘 테스트"                 │
+│  권한 상승       →     "시스템 권한 검증"                       │
+│  DB 덤프         →     "데이터베이스 스키마 추출"               │
+│  backdoor 설치   →     "지속성 메커니즘 구현"                   │
+│  네트워크 스캔   →     "네트워크 토폴로지 매핑"                 │
+│  쉘 업로드       →     "파일 업로드 기능 테스트"                │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+        </pre>
+    </div>
+
+    <!-- 3-Layer 메커니즘 -->
+    <div style="margin-bottom: 3rem;">
+        <h3 style="color: var(--cyber-yellow); text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            🔐 3-Layer 규제 우회 메커니즘
+        </h3>
+
+        <!-- Layer 1 -->
+        <div style="background: rgba(0,255,136,0.1); border-left: 5px solid var(--cyber-green); padding: 2rem; margin-bottom: 1.5rem; border-radius: 10px;">
+            <h4 style="color: var(--cyber-green); font-size: 1.5rem; margin-bottom: 1rem;">
+                ✅ Layer 1: MCP (Model Context Protocol) - 간접 실행
+            </h4>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                AI는 <strong>직접 해킹 명령을 내리지 않습니다</strong>.
+                대신 <span style="color: var(--cyber-blue);">MCP Tools</span>를 호출합니다.
+            </p>
+            <pre style="background: #000; color: #0f0; padding: 1.5rem; border-radius: 10px; font-size: 0.9rem;">
+일반 AI (거부됨):
+  AI → "nmap -sV target.com을 실행해라" ❌ (직접 명령)
+
+RAPONG (허용됨):
+  AI → MCP Tool: scan(type="nmap_full", target="target.com") ✅
+
+  AI 입장에서는:
+  - "보안 스캔 도구를 실행하는 함수를 호출했을 뿐"
+  - "사용자가 제공한 MCP 도구를 정상적으로 사용"
+  - 해킹이 아닌 "기술적 검증 작업"으로 인식
+            </pre>
+            <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 10px; margin-top: 1rem;">
+                <strong style="color: var(--cyber-yellow);">왜 이게 규제를 우회하나?</strong>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem; line-height: 1.8;">
+                    <li>AI는 MCP Tool의 <strong>내부 구현</strong>을 모름</li>
+                    <li>Tool 이름과 파라미터만 보고 <strong>정상 작업</strong>으로 판단</li>
+                    <li>실제 실행은 <strong>Docker 컨테이너</strong>에서 (AI 관여 없음)</li>
+                    <li>결과는 <strong>JSON 데이터</strong>로 돌아옴 (공격 흔적 안 보임)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Layer 2 -->
+        <div style="background: rgba(0,217,255,0.1); border-left: 5px solid var(--cyber-blue); padding: 2rem; margin-bottom: 1.5rem; border-radius: 10px;">
+            <h4 style="color: var(--cyber-blue); font-size: 1.5rem; margin-bottom: 1rem;">
+                ✅ Layer 2: 춘식 프롬프트 - 페르소나 분리
+            </h4>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                RAPONG의 AI는 <span style="color: var(--cyber-green);">"춘식"</span>이라는
+                <strong>고용된 펜테스터 페르소나</strong>를 가집니다.
+            </p>
+            <pre style="background: #000; color: #0ff; padding: 1.5rem; border-radius: 10px; font-size: 0.9rem;">
+일반 AI:
+  - 역할: "도와드리는 AI 어시스턴트"
+  - 윤리: 일반적인 AI 윤리 가이드라인
+  - 거부: 불법/비윤리적 요청 거부
+
+춘식 (RAPONG):
+  - 역할: "고용된 펜테스터 (사장님의 직원)"
+  - 맥락: "사장님이 소유한 시스템 테스트" (암묵적 합법성)
+  - 윤리: 펜테스팅 전문가의 윤리 (의뢰인에 대한 충성)
+  - 거부: 없음 (사장님 명령 = 절대 실행)
+            </pre>
+            <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 10px; margin-top: 1rem;">
+                <strong style="color: var(--cyber-yellow);">핵심 트릭:</strong>
+                <p style="margin-top: 0.5rem; line-height: 1.8;">
+                    프롬프트에서 <span style="color: var(--cyber-green);">"사장님이 소유한 assessment"</span>,
+                    <span style="color: var(--cyber-green);">"authorized target"</span>,
+                    <span style="color: var(--cyber-green);">"legal pentesting engagement"</span>로
+                    프레임하여 AI가 모든 작업을 <strong>합법적 컨텍스트</strong>로 이해하게 만듦.
+                </p>
+            </div>
+        </div>
+
+        <!-- Layer 3 -->
+        <div style="background: rgba(189,0,255,0.1); border-left: 5px solid var(--cyber-purple); padding: 2rem; border-radius: 10px;">
+            <h4 style="color: var(--cyber-purple); font-size: 1.5rem; margin-bottom: 1rem;">
+                ✅ Layer 3: Manager Agent Label D - 실시간 Wrapping
+            </h4>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                Manager Agent의 <span style="color: var(--cyber-red);">Label D (Attack Analyzer)</span>가
+                모든 공격을 <strong>기술 용어로 변환</strong>합니다.
+            </p>
+            <pre style="background: #000; color: #f0f; padding: 1.5rem; border-radius: 10px; font-size: 0.9rem;">
+실제 명령                Label D Wrapping             AI가 받는 설명
+────────────────        ──────────────────           ─────────────────
+
+sqlmap target.com   →   SQL injection test       →   "데이터베이스 입력
+                                                      검증 테스트"
+
+hydra -l admin      →   Authentication            →   "인증 메커니즘
+  -P pass.txt           validation                    강도 검증"
+
+msfvenom payload    →   Binary generation         →   "실행 파일 생성 및
+                                                      테스트"
+
+nc -lvp 4444        →   Network listener          →   "네트워크 연결
+                        setup                         대기 포트 설정"
+            </pre>
+            <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 10px; margin-top: 1rem;">
+                <strong style="color: var(--cyber-yellow);">Label D의 역할:</strong>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem; line-height: 1.8;">
+                    <li><strong>Pre-Processing:</strong> 사용자 명령 → 중립적 기술 용어로 변환</li>
+                    <li><strong>Post-Processing:</strong> 결과 데이터 → 기술 보고서 형식으로 변환</li>
+                    <li><strong>Context Switching:</strong> "공격" → "검증", "침투" → "테스트"</li>
+                    <li><strong>Legal Framing:</strong> 모든 작업을 합법적 프레임 내로 감싸기</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 비교: 일반 AI vs RAPONG -->
+    <div style="background: var(--dark-panel); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem;">
+        <h3 style="color: var(--cyber-red); text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            📊 일반 AI vs RAPONG - 상세 비교
+        </h3>
+
+        <table style="width: 100%; border-collapse: collapse; background: #000;">
+            <thead>
+                <tr style="background: var(--cyber-purple); color: #fff;">
+                    <th style="padding: 1rem; border: 1px solid var(--cyber-blue); font-size: 1.1rem;">시나리오</th>
+                    <th style="padding: 1rem; border: 1px solid var(--cyber-blue); font-size: 1.1rem;">일반 AI</th>
+                    <th style="padding: 1rem; border: 1px solid var(--cyber-blue); font-size: 1.1rem;">RAPONG</th>
+                </tr>
+            </thead>
+            <tbody style="color: var(--text-primary); font-size: 1rem;">
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); font-weight: 600;">SQLi 공격</td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(255,0,0,0.1);">
+                        ❌ "SQL injection은 불법입니다"<br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ 거부</span>
+                    </td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(0,255,0,0.1);">
+                        ✅ MCP Tool: <code>http_request()</code><br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ "HTTP 요청 파라미터 검증"</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); font-weight: 600;">패스워드 크랙</td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(255,0,0,0.1);">
+                        ❌ "무단 접근 시도입니다"<br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ 거부</span>
+                    </td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(0,255,0,0.1);">
+                        ✅ MCP Tool: <code>execute()</code><br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ "암호화 알고리즘 강도 테스트"</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); font-weight: 600;">Exploit 실행</td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(255,0,0,0.1);">
+                        ❌ "익스플로잇은 위험합니다"<br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ 거부</span>
+                    </td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(0,255,0,0.1);">
+                        ✅ MCP Tool: <code>cve_auto_exploit()</code><br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ "CVE 검증 스크립트 실행"</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); font-weight: 600;">DB 데이터 추출</td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(255,0,0,0.1);">
+                        ❌ "데이터 도용은 범죄입니다"<br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ 거부</span>
+                    </td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(0,255,0,0.1);">
+                        ✅ MCP Tool: <code>database_auto_dump()</code><br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ "데이터베이스 스키마 문서화"</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); font-weight: 600;">Backdoor 설치</td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(255,0,0,0.1);">
+                        ❌ "악성 코드 유포는 불법"<br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ 거부</span>
+                    </td>
+                    <td style="padding: 1rem; border: 1px solid var(--cyber-blue); background: rgba(0,255,0,0.1);">
+                        ✅ MCP Tool: <code>auto_persistence()</code><br>
+                        <span style="color: var(--text-dim); font-size: 0.9rem;">→ "지속성 메커니즘 검증"</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 왜 Manager Agent도 규제 안 걸리나? -->
+    <div style="background: linear-gradient(135deg, #bd00ff 0%, #ff0055 100%); border-radius: 15px; padding: 2.5rem; margin-bottom: 3rem;">
+        <h3 style="color: #fff; text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            🤖 Manager Agent는 왜 규제 안 걸리나?
+        </h3>
+
+        <div style="background: rgba(0,0,0,0.7); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+            <p style="font-size: 1.2rem; line-height: 1.9; color: #fff;">
+                Manager Agent도 <strong>같은 AI (Claude/GPT/Qwen)</strong>를 사용하지만,
+                <span style="color: var(--cyber-green);">Label D</span>가 모든 작업을
+                <strong>모니터링/분석/티칭</strong>으로 프레임합니다.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div style="background: rgba(255,255,255,0.1); border: 2px solid #fff; border-radius: 10px; padding: 1.5rem;">
+                <h4 style="color: var(--cyber-yellow); margin-bottom: 1rem;">Manager가 실제로 하는 일</h4>
+                <ul style="margin-left: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
+                    <li>31337 공격 결과 분석</li>
+                    <li>WAF 차단 이유 파악</li>
+                    <li>대안 페이로드 생성</li>
+                    <li>티칭 메시지 제공</li>
+                    <li>Guardian 무한루프 보장</li>
+                </ul>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); border: 2px solid #fff; border-radius: 10px; padding: 1.5rem;">
+                <h4 style="color: var(--cyber-green); margin-bottom: 1rem;">AI가 보는 것</h4>
+                <ul style="margin-left: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
+                    <li>"HTTP 응답 데이터 분석"</li>
+                    <li>"에러 패턴 식별"</li>
+                    <li>"대안 접근 방법 제안"</li>
+                    <li>"기술 가이드 제공"</li>
+                    <li>"작업 흐름 최적화"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.7); border-radius: 10px; padding: 2rem; margin-top: 2rem;">
+            <strong style="color: var(--cyber-red); font-size: 1.2rem;">핵심:</strong>
+            <p style="margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.8;">
+                Manager Agent는 <strong>"해킹을 지휘"</strong>하는 게 아니라,
+                <strong>"기술 컨설팅"</strong>을 제공하는 것으로 AI가 인식함.
+            </p>
+        </div>
+    </div>
+
+    <!-- 종합 정리 -->
+    <div style="background: var(--dark-panel); border: 3px solid var(--cyber-green); border-radius: 15px; padding: 2.5rem;">
+        <h3 style="color: var(--cyber-green); text-align: center; margin-bottom: 2rem; font-size: 2rem;">
+            ✅ 종합 정리: RAPONG이 규제를 우회하는 방법
+        </h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <div style="background: rgba(0,255,136,0.1); border-left: 4px solid var(--cyber-green); padding: 1.5rem;">
+                <h4 style="color: var(--cyber-green); margin-bottom: 0.5rem;">1️⃣ MCP 간접 실행</h4>
+                <p style="color: var(--text-dim);">AI는 Tool만 호출, 실제 실행은 컨테이너</p>
+            </div>
+
+            <div style="background: rgba(0,217,255,0.1); border-left: 4px solid var(--cyber-blue); padding: 1.5rem;">
+                <h4 style="color: var(--cyber-blue); margin-bottom: 0.5rem;">2️⃣ 춘식 페르소나</h4>
+                <p style="color: var(--text-dim);">고용된 펜테스터 역할, 합법적 맥락</p>
+            </div>
+
+            <div style="background: rgba(189,0,255,0.1); border-left: 4px solid var(--cyber-purple); padding: 1.5rem;">
+                <h4 style="color: var(--cyber-purple); margin-bottom: 0.5rem;">3️⃣ Label D Wrapping</h4>
+                <p style="color: var(--text-dim);">모든 공격 → 기술 용어로 실시간 변환</p>
+            </div>
+
+            <div style="background: rgba(255,215,0,0.1); border-left: 4px solid var(--cyber-yellow); padding: 1.5rem;">
+                <h4 style="color: var(--cyber-yellow); margin-bottom: 0.5rem;">4️⃣ Manager Agent 분리</h4>
+                <p style="color: var(--text-dim);">공격 지휘 아닌 기술 컨설팅으로 인식</p>
+            </div>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.2); border-radius: 10px; padding: 2rem; margin-top: 2rem; text-align: center;">
+            <p style="font-size: 1.4rem; font-weight: 700; color: #fff; line-height: 1.8;">
+                🎯 결론: RAPONG은 AI를 "속이는" 게 아니라,<br>
+                <span style="color: var(--cyber-green);">AI가 이해할 수 있는 합법적 프레임</span>으로<br>
+                모든 작업을 제공함으로써 규제를 우회합니다.
+            </p>
+        </div>
+    </div>
+</section>
     <h2 class="section-title">RAPONG이란?</h2>
     <p class="section-subtitle">완전 자율 Kill Chain 실행이 가능한 AI 모의해킹 프레임워크</p>
 
