@@ -3257,6 +3257,235 @@ db-admin:Database#123
 </section>
 
 
+<!-- ========== MANAGER AGENT v2.0 ========== -->
+<section class="container" style="background: linear-gradient(135deg, #2d1b69 0%, #1a1a2e 100%); padding: 4rem 2rem; border-radius: 20px; margin-top: 4rem;">
+    <h2 class="section-title" style="color: var(--cyber-purple); text-align: center;">🤖 Manager Agent v2.0 - 31337의 팀장</h2>
+
+    <div style="background: rgba(102,126,234,0.1); border: 2px solid var(--cyber-blue); border-radius: 15px; padding: 2rem; margin-bottom: 3rem;">
+        <p style="font-size: 1.3rem; line-height: 1.8; text-align: center; color: var(--text-primary);">
+            <strong>Manager Agent</strong>는 31337 Engine을 총괄 감독하는 상위 AI 에이전트입니다.<br>
+            <span style="color: var(--cyber-purple);">6개 Label (A~E + I Guardian)</span>로 구성되어
+            모든 공격을 실시간 모니터링, 분석, 티칭하며 무한루프를 보장합니다.
+        </p>
+    </div>
+
+    <!-- Architecture Diagram -->
+    <div style="background: var(--card-bg); border-radius: 15px; padding: 2rem; margin-bottom: 3rem;">
+        <h3 style="color: var(--cyber-green); margin-bottom: 2rem; text-align: center;">아키텍처</h3>
+        <pre style="background: #000; color: #0f0; padding: 2rem; border-radius: 10px; overflow-x: auto; font-size: 0.85rem; line-height: 1.5;">
+┌─────────────────────────────────────────────────────────────────┐
+│                     Manager Agent v2.0                          │
+│                    (Team Leader / 팀장)                         │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐  │
+│  │  Label A  │  │  Label B  │  │  Label C  │  │  Label D  │  │
+│  │ Knowledge │  │   Scope   │  │  System   │  │  Attack   │  │
+│  │   Base    │  │  Manager  │  │  Health   │  │ Analyzer  │  │
+│  └───────────┘  └───────────┘  └───────────┘  └───────────┘  │
+│                                                                 │
+│  ┌───────────┐  ┌───────────────────────────────────────────┐ │
+│  │  Label E  │  │         Label I - Guardian                │ │
+│  │ Teaching  │  │    (무한루프 보장 + Proxy 실행)          │ │
+│  │  Engine   │  │                                            │ │
+│  └───────────┘  └───────────────────────────────────────────┘ │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓↑ (모니터링 + 티칭)
+┌─────────────────────────────────────────────────────────────────┐
+│              31337 Engine (757 Attack Features)                 │
+│                        (Worker / 일꾼)                          │
+└─────────────────────────────────────────────────────────────────┘
+        </pre>
+    </div>
+
+    <!-- 6 Labels -->
+    <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+
+        <!-- Label A -->
+        <div class="stat-card" style="background: rgba(76,175,80,0.1); border: 2px solid var(--cyber-green);">
+            <h3 style="color: var(--cyber-green); font-size: 1.5rem; margin-bottom: 1rem;">📚 Label A - Knowledge Base</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-primary);">지식 베이스 - 모든 것을 안다</p>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>757개 기능 전부 파악</li>
+                <li>각 모듈 역할 이해</li>
+                <li>성공/실패 패턴 학습</li>
+                <li>타겟별 최적 공격법 기억</li>
+                <li><strong>MANAGER_LABELS_REFERENCE.md 직접 로드</strong></li>
+            </ul>
+        </div>
+
+        <!-- Label B -->
+        <div class="stat-card" style="background: rgba(33,150,243,0.1); border: 2px solid var(--cyber-blue);">
+            <h3 style="color: var(--cyber-blue); font-size: 1.5rem; margin-bottom: 1rem;">🎯 Label B - Scope Manager</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-primary);">스코프 관리자 - 범위를 지킨다</p>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>타겟 범위 파악</li>
+                <li>제약사항 관리</li>
+                <li>룰 위반 방지</li>
+                <li>실시간 스코프 체크</li>
+                <li><strong>NO_LIMITS vs STRICT 모드</strong></li>
+            </ul>
+        </div>
+
+        <!-- Label C -->
+        <div class="stat-card" style="background: rgba(156,39,176,0.1); border: 2px solid var(--cyber-purple);">
+            <h3 style="color: var(--cyber-purple); font-size: 1.5rem; margin-bottom: 1rem;">💊 Label C - System Health</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-primary);">시스템 헬스 - 모든 툴 가동</p>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>MCP/Docker/Tor 체크</li>
+                <li>도구 가용성 확인</li>
+                <li>실시간 모니터링</li>
+                <li>자동 복구 (auto_fix)</li>
+                <li><strong>헬스 체크 4개 항목</strong></li>
+            </ul>
+        </div>
+
+        <!-- Label D -->
+        <div class="stat-card" style="background: rgba(255,152,0,0.1); border: 2px solid var(--cyber-yellow);">
+            <h3 style="color: var(--cyber-yellow); font-size: 1.5rem; margin-bottom: 1rem;">🔬 Label D - Attack Analyzer</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-primary);">공격 분석가 - 실패를 분석한다</p>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>WAF 감지 (5종류)</li>
+                <li>차단 이유 파악</li>
+                <li>AI 페이로드 생성 (HYBRID)</li>
+                <li>Ollama + Claude 통합</li>
+                <li><strong>대안 자동 제시</strong></li>
+            </ul>
+        </div>
+
+        <!-- Label E -->
+        <div class="stat-card" style="background: rgba(244,67,54,0.1); border: 2px solid var(--cyber-red);">
+            <h3 style="color: var(--cyber-red); font-size: 1.5rem; margin-bottom: 1rem;">🎓 Label E - Teaching Engine</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-primary);">티칭 엔진 - 실전처럼 가르친다</p>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>6가지 티칭 룰</li>
+                <li>WAF 우회 가이드</li>
+                <li>Rate limit 대응</li>
+                <li>실시간 티칭 메시지</li>
+                <li><strong>전문 펜테스터처럼 티칭</strong></li>
+            </ul>
+        </div>
+
+        <!-- Label I -->
+        <div class="stat-card" style="background: rgba(189,0,255,0.1); border: 2px solid #bd00ff;">
+            <h3 style="color: #bd00ff; font-size: 1.5rem; margin-bottom: 1rem;">🛡️ Label I - Guardian</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-primary);">가디언 - 무한루프를 보장한다</p>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>금지 단어 차단 (끝, 완료, etc.)</li>
+                <li>금지 질문 차단 (다음 뭐 할까, etc.)</li>
+                <li>Proxy Execution (4가지)</li>
+                <li>도구 자동 설치 (7개)</li>
+                <li><strong>STOP 단어만 정지 (5개)</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Workflow -->
+    <div style="background: var(--card-bg); border-radius: 15px; padding: 2rem; margin-bottom: 3rem;">
+        <h3 style="color: var(--cyber-green); margin-bottom: 2rem; text-align: center;">통합 워크플로우</h3>
+        <pre style="background: #000; color: #0f0; padding: 2rem; border-radius: 10px; overflow-x: auto; font-size: 0.85rem; line-height: 1.5;">
+1. activate_31337()
+   ↓
+   Manager 자동 초기화 (60s timeout)
+   ├─ Label A: Knowledge Base
+   ├─ Label B: Scope Manager
+   ├─ Label C: System Health
+   ├─ Label D: Attack Analyzer (AI: HYBRID)
+   ├─ Label E: Teaching Engine
+   └─ Label I: Guardian
+   ↓
+2. get_next_attack()
+   ↓
+   Label I Guardian 사전 체크
+   manager_monitoring: True ✅
+   ↓
+3. 31337 공격 실행
+   ↓
+4. process_attack_result()
+   ↓
+   Label D: 분석 (WAF 감지, 대안 생성)
+   Label E: 티칭 ("Cloudflare다. URL인코딩 시도해.")
+   Label A: 학습 (성공/실패 저장)
+   ↓
+5. handle_attack_error() (에러 시)
+   ↓
+   Label I: Proxy Execution
+   ├─ tool_missing → 자동 설치
+   ├─ permission_denied → sudo 재실행
+   ├─ timeout → IP 변경
+   └─ waf_blocked → 우회 시도
+   ↓
+6. 무한 반복 (Label I Guardian 감시)
+   STOP 단어 (그만/멈춰/정지/스톱/중단) 전까지 계속
+        </pre>
+    </div>
+
+    <!-- Key Features -->
+    <div style="background: rgba(102,126,234,0.1); border: 2px solid var(--cyber-blue); border-radius: 15px; padding: 2rem;">
+        <h3 style="color: var(--cyber-blue); margin-bottom: 1.5rem; text-align: center;">핵심 기능</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div>
+                <h4 style="color: var(--cyber-green); margin-bottom: 0.5rem;">✅ 자동 초기화</h4>
+                <p style="color: var(--text-dim);">31337 activate 시 Manager 자동 생성</p>
+            </div>
+            <div>
+                <h4 style="color: var(--cyber-green); margin-bottom: 0.5rem;">✅ 실시간 모니터링</h4>
+                <p style="color: var(--text-dim);">모든 공격 자동 분석 + 티칭</p>
+            </div>
+            <div>
+                <h4 style="color: var(--cyber-green); margin-bottom: 0.5rem;">✅ Proxy 실행</h4>
+                <p style="color: var(--text-dim);">에러 발생 시 Manager가 대신 실행</p>
+            </div>
+            <div>
+                <h4 style="color: var(--cyber-green); margin-bottom: 0.5rem;">✅ 무한루프 보장</h4>
+                <p style="color: var(--text-dim);">Guardian이 감시, 절대 멈추지 않음</p>
+            </div>
+            <div>
+                <h4 style="color: var(--cyber-green); margin-bottom: 0.5rem;">✅ AI 통합</h4>
+                <p style="color: var(--text-dim);">LOCAL (Ollama) + EXTERNAL (Claude)</p>
+            </div>
+            <div>
+                <h4 style="color: var(--cyber-green); margin-bottom: 0.5rem;">✅ 100점 검증</h4>
+                <p style="color: var(--text-dim);">실제 실행 검증 완료</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Documentation -->
+    <div style="margin-top: 3rem; background: rgba(76,175,80,0.1); border: 2px solid var(--cyber-green); border-radius: 15px; padding: 2rem;">
+        <h3 style="color: var(--cyber-green); margin-bottom: 1.5rem; text-align: center;">📚 완전 문서화</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 10px;">
+                <strong style="color: var(--cyber-blue);">MANAGER_LABELS_REFERENCE.md</strong>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">52KB, 1670 lines - 6개 Label 완전 가이드</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 10px;">
+                <strong style="color: var(--cyber-blue);">MANAGER_31337_INTEGRATION.md</strong>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">12KB - 통합 사용법</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 10px;">
+                <strong style="color: var(--cyber-blue);">MANAGER_VERIFICATION_100.md</strong>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">100점 검증 보고서</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 10px;">
+                <strong style="color: var(--cyber-blue);">COLDRUN_VERIFICATION.md</strong>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">14KB - 콜드런 검증</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 10px;">
+                <strong style="color: var(--cyber-blue);">MANAGER_SAFETY_ENHANCEMENTS.md</strong>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">15KB - 안전성 강화</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 10px;">
+                <strong style="color: var(--cyber-blue);">31337_MANAGER_AGENT_PLAN.md</strong>
+                <p style="color: var(--text-dim); margin-top: 0.5rem;">25KB - 전체 플랜</p>
+            </div>
+        </div>
+        <p style="margin-top: 1.5rem; text-align: center; color: var(--cyber-purple); font-size: 1.1rem;">
+            <strong>총 146KB, 8개 MD 파일 - Manager Agent 완전 문서화</strong>
+        </p>
+    </div>
+</section>
 <!-- ========== FOOTER ========== -->
 <footer>
     <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">RAPONG v4.5</p>
